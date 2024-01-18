@@ -70,13 +70,13 @@ namespace Dot.Net._6.WF.Calendario.Senac
 
             if (string.IsNullOrEmpty(txtMeta.Text))
             {
-                MessageBox.Show("O campo 'Meta' é obrigatório.");
+                MessageBox.Show("O campo 'Meta de Alunos' é obrigatório.");
                 return;
             }
 
             if (string.IsNullOrEmpty(txtRealizado.Text))
             {
-                MessageBox.Show("O campo 'Realizado' é obrigatório.");
+                MessageBox.Show("O campo 'Matriculados' é obrigatório.");
                 return;
             }
 
@@ -100,12 +100,8 @@ namespace Dot.Net._6.WF.Calendario.Senac
 
             var nome = cmbCurso.Text;
             var inicio = dtpInicio.Value;
-            var fim = dtpFim.Value;
-            var meta = txtMeta.Text;
-            var dias = txtDias.Text;
+            var fim = dtpFim.Value;                       
             var horario = cmbHorario.Text;
-            var realizado = txtRealizado.Text;
-            var valor = mtbValor.Text;
             var turma = txtTurma.Text;
             var sala = txtSala.Text;
 
@@ -379,8 +375,8 @@ namespace Dot.Net._6.WF.Calendario.Senac
                     AdicionarHistorico(bd, fimOriginal.ToString(), curso.Fim.ToString(), "Data de Fim");
                     AdicionarHistorico(bd, diasOriginal, curso.Dias, "Dias");
                     AdicionarHistorico(bd, horarioOriginal, curso.Horario, "Horário");
-                    AdicionarHistorico(bd, metaOriginal, curso.Meta, "Meta");
-                    AdicionarHistorico(bd, realizadoOriginal, curso.Realizado, "Realizado");
+                    AdicionarHistorico(bd, metaOriginal, curso.Meta, "Meta de Alunos");
+                    AdicionarHistorico(bd, realizadoOriginal, curso.Realizado, "Matriculados");
                     AdicionarHistorico(bd, valorOriginal, curso.Valor, "Valor");
                     AdicionarHistorico(bd, turmaOriginal, curso.Turma, "Turma");
                     AdicionarHistorico(bd, salaOriginal, curso.Sala, "Sala");
