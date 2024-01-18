@@ -222,7 +222,7 @@ namespace Dot.Net._6.WF.Calendario.Senac
 
             if (string.IsNullOrEmpty(txtId.Text))
             {
-                MessageBox.Show("Informe o curso antes de tentar excluir.");
+                MessageBox.Show("Informe o curso antes de excluir.");
             }
             else
             {
