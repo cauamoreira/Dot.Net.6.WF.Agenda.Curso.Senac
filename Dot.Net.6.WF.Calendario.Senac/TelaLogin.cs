@@ -10,24 +10,8 @@
             InitializeComponent();
             txtUsuario.Focus();
             picLoading.Hide();
-            picSenha.Click += PicSenha_Click;
+            picSenha.Click += picSenha_Click;
 
-        }
-
-        private void PicSenha_Click(object sender, EventArgs e)
-        {
-            _podeVerSenha = !_podeVerSenha;
-
-            if (_podeVerSenha)
-            {
-                picSenha.Image = Properties.Resources.hide4;
-                txtSenha.PasswordChar = '•';
-            }
-            else
-            {
-                picSenha.Image = Properties.Resources.show4;
-                txtSenha.PasswordChar = '\0';
-            }
         }
 
         private void AbrirFormPrincipal()
@@ -127,6 +111,22 @@
             esqueceuSenha.Show();
         }
 
+        private void picSenha_Click(object sender, EventArgs e)
+        {
+
+            _podeVerSenha = !_podeVerSenha;
+
+            if (_podeVerSenha)
+            {
+                picSenha.Image = Properties.Resources.esconder;
+                txtSenha.PasswordChar = '\0';
+            }
+            else
+            {
+                picSenha.Image = Properties.Resources.visualizar;
+                txtSenha.PasswordChar = '\u25CF';
+            }
+        }
     }
 }
 

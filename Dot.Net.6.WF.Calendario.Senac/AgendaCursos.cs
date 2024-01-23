@@ -381,8 +381,8 @@ namespace Dot.Net._6.WF.Calendario.Senac
                     AdicionarHistorico(bd, fimOriginal.ToString(), curso.Fim.ToString(), "Data de Fim");
                     AdicionarHistorico(bd, diasOriginal.ToString(), curso.Dias.ToString(), "Dias");
                     AdicionarHistorico(bd, horarioOriginal, curso.Horario, "Horário");
-                    AdicionarHistorico(bd, metaOriginal, curso.Meta, "Meta");
-                    AdicionarHistorico(bd, realizadoOriginal, curso.Realizado, "Realizado");
+                    AdicionarHistorico(bd, metaOriginal, curso.Meta, "Meta de Alunos");
+                    AdicionarHistorico(bd, realizadoOriginal, curso.Realizado, "Matriculados");
                     AdicionarHistorico(bd, valorOriginal, curso.Valor, "Valor");
                     AdicionarHistorico(bd, turmaOriginal, curso.Turma, "Turma");
                     AdicionarHistorico(bd, salaOriginal, curso.Sala, "Sala");
