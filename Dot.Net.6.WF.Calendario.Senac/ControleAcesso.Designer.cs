@@ -47,13 +47,13 @@
             panel1.Controls.Add(gridHistorico);
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(866, 383);
+            panel1.Size = new Size(713, 419);
             panel1.TabIndex = 0;
             // 
             // btnSair
             // 
             btnSair.Font = new Font("Microsoft PhagsPa", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            btnSair.Location = new Point(375, 347);
+            btnSair.Location = new Point(280, 359);
             btnSair.Name = "btnSair";
             btnSair.Size = new Size(96, 30);
             btnSair.TabIndex = 2;
@@ -125,7 +125,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoSize = true;
-            ClientSize = new Size(864, 384);
+            ClientSize = new Size(714, 422);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.FixedDialog;
             Icon = (Icon)resources.GetObject("$this.Icon");

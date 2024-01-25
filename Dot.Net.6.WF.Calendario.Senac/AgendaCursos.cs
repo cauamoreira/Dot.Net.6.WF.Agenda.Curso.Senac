@@ -746,20 +746,6 @@ namespace Dot.Net._6.WF.Calendario.Senac
         }
 
 
-        //private void gridCurso_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
-        //{
-        //    List<int> colunaDiasIndex = new List<int> { 4 };
-
-        //    if (e.RowIndex >= 0 && colunaDiasIndex.Contains(e.ColumnIndex))
-        //    {
-        //        if (e.Value != null)
-        //        {
-        //            // Mostra o dia da semana em português quando o CheckBox está marcado
-        //            e.Value = e.Value.ToString().Split(',').Select(dia => DateTime.Now.ToString("dddd", new CultureInfo("pt-BR"))).ToList();
-        //            e.FormattingApplied = true;
-        //        }
-        //    }
-        //}
     }
 }
 

@@ -92,7 +92,7 @@
             label.Name = "label";
             label.Size = new Size(117, 18);
             label.TabIndex = 0;
-            label.Text = "Cadastrar curso:";
+            label.Text = "Adicionar curso:";
             // 
             // btnExcluir
             // 
