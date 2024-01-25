@@ -82,6 +82,11 @@ namespace Dot.Net._6.WF.Calendario.Senac
             TelaLogin telaLogin = new TelaLogin();
             telaLogin.Show();
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
 

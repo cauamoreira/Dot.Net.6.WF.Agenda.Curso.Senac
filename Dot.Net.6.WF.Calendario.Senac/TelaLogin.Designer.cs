@@ -64,16 +64,16 @@
             panel1.Location = new Point(0, 0);
             panel1.Margin = new Padding(3, 2, 3, 2);
             panel1.Name = "panel1";
-            panel1.Size = new Size(703, 537);
+            panel1.Size = new Size(683, 537);
             panel1.TabIndex = 26;
             // 
             // picLoading
             // 
             picLoading.BackColor = Color.White;
             picLoading.Image = (Image)resources.GetObject("picLoading.Image");
-            picLoading.Location = new Point(227, 400);
+            picLoading.Location = new Point(227, 414);
             picLoading.Name = "picLoading";
-            picLoading.Size = new Size(225, 89);
+            picLoading.Size = new Size(225, 110);
             picLoading.SizeMode = PictureBoxSizeMode.Zoom;
             picLoading.TabIndex = 31;
             picLoading.TabStop = false;
@@ -83,9 +83,9 @@
             label3.AutoSize = true;
             label3.BackColor = Color.White;
             label3.Cursor = Cursors.Hand;
-            label3.Font = new Font("Microsoft PhagsPa", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            label3.Font = new Font("Microsoft PhagsPa", 10F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point);
             label3.ForeColor = Color.Navy;
-            label3.Location = new Point(273, 333);
+            label3.Location = new Point(274, 332);
             label3.Name = "label3";
             label3.Size = new Size(129, 18);
             label3.TabIndex = 36;
@@ -130,7 +130,7 @@
             btnEntrar.BackColor = SystemColors.ButtonHighlight;
             btnEntrar.Font = new Font("Microsoft PhagsPa", 10F, FontStyle.Bold, GraphicsUnit.Point);
             btnEntrar.ForeColor = SystemColors.Desktop;
-            btnEntrar.Location = new Point(287, 364);
+            btnEntrar.Location = new Point(289, 378);
             btnEntrar.Name = "btnEntrar";
             btnEntrar.Size = new Size(96, 30);
             btnEntrar.TabIndex = 32;
@@ -180,7 +180,7 @@
             pictureBox1.Location = new Point(0, 0);
             pictureBox1.Margin = new Padding(3, 2, 3, 2);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(701, 535);
+            pictureBox1.Size = new Size(681, 535);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 26;
             pictureBox1.TabStop = false;
@@ -189,7 +189,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(703, 537);
+            ClientSize = new Size(683, 537);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Icon = (Icon)resources.GetObject("$this.Icon");

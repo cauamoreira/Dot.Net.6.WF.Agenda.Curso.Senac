@@ -31,6 +31,12 @@
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
+        "Entry"
+        {
+        "MsmKey" = "8:_B08F5F39688F4BF890C3C7969AFF169E"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
     }
     "Configurations"
     {
@@ -96,6 +102,26 @@
         }
         "File"
         {
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_B08F5F39688F4BF890C3C7969AFF169E"
+            {
+            "SourcePath" = "8:..\\Dot.Net.6.WF.Calendario.Senac\\Senac logo.ico"
+            "TargetName" = "8:Senac logo.ico"
+            "Tag" = "8:"
+            "Folder" = "8:_AEBD21898AB941D39B05571A49C901B5"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
         }
         "FileType"
         {
@@ -117,7 +143,7 @@
             {
             "DefaultLocation" = "8:[ProgramFilesFolder][Manufacturer]\\[ProductName]"
             "Name" = "8:#1925"
-            "AlwaysCreate" = "11:FALSE"
+            "AlwaysCreate" = "11:TRUE"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Property" = "8:TARGETDIR"
@@ -128,7 +154,7 @@
             "{1525181F-901A-416C-8A58-119130FE478E}:_CA70E4D632494BDFBC362AF95850B709"
             {
             "Name" = "8:#1919"
-            "AlwaysCreate" = "11:FALSE"
+            "AlwaysCreate" = "11:TRUE"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Property" = "8:ProgramMenuFolder"
@@ -153,7 +179,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Setup2"
         "ProductCode" = "8:{01723ED8-8D50-45AB-ABCE-7700BEC0FEBD}"
-        "PackageCode" = "8:{951C21A0-9BA0-4E10-9D62-7068CC8A7DB3}"
+        "PackageCode" = "8:{7290EE02-E218-4BFE-9D1F-05F947404432}"
         "UpgradeCode" = "8:{903275A6-AF67-47E0-A786-245109A9A3EF}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -273,6 +299,20 @@
         }
         "Shortcut"
         {
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_4FA14A02B8EB4E08BF0BC872F255A5F4"
+            {
+            "Name" = "8:Agenda-Senac"
+            "Arguments" = "8:"
+            "Description" = "8:"
+            "ShowCmd" = "3:1"
+            "IconIndex" = "3:0"
+            "Transitive" = "11:FALSE"
+            "Target" = "8:_783972A7EF464AB597623DD362FD5847"
+            "Folder" = "8:_AC99C3BF0BC54BA9839A478424F0AF70"
+            "WorkingFolder" = "8:_AEBD21898AB941D39B05571A49C901B5"
+            "Icon" = "8:_B08F5F39688F4BF890C3C7969AFF169E"
+            "Feature" = "8:"
+            }
         }
         "UserInterface"
         {

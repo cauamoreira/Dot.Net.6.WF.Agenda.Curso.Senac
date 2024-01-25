@@ -215,7 +215,7 @@
             // 
             btnExcluirCurso.Anchor = AnchorStyles.Bottom;
             btnExcluirCurso.Font = new Font("Microsoft PhagsPa", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            btnExcluirCurso.Location = new Point(370, 549);
+            btnExcluirCurso.Location = new Point(381, 550);
             btnExcluirCurso.Name = "btnExcluirCurso";
             btnExcluirCurso.Size = new Size(96, 30);
             btnExcluirCurso.TabIndex = 4;
@@ -227,7 +227,7 @@
             // 
             btnAlterarCurso.Anchor = AnchorStyles.Bottom;
             btnAlterarCurso.Font = new Font("Microsoft PhagsPa", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            btnAlterarCurso.Location = new Point(206, 549);
+            btnAlterarCurso.Location = new Point(217, 550);
             btnAlterarCurso.Name = "btnAlterarCurso";
             btnAlterarCurso.Size = new Size(96, 30);
             btnAlterarCurso.TabIndex = 3;
@@ -239,7 +239,7 @@
             // 
             btnSairCurso.Anchor = AnchorStyles.Bottom;
             btnSairCurso.Font = new Font("Microsoft PhagsPa", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            btnSairCurso.Location = new Point(535, 549);
+            btnSairCurso.Location = new Point(546, 550);
             btnSairCurso.Name = "btnSairCurso";
             btnSairCurso.Size = new Size(96, 30);
             btnSairCurso.TabIndex = 5;
@@ -251,7 +251,7 @@
             // 
             btnAdicionarCurso.Anchor = AnchorStyles.Bottom;
             btnAdicionarCurso.Font = new Font("Microsoft PhagsPa", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            btnAdicionarCurso.Location = new Point(45, 549);
+            btnAdicionarCurso.Location = new Point(56, 550);
             btnAdicionarCurso.Name = "btnAdicionarCurso";
             btnAdicionarCurso.Size = new Size(96, 30);
             btnAdicionarCurso.TabIndex = 2;

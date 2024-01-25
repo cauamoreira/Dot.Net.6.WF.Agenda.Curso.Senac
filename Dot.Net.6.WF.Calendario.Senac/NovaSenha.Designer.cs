@@ -55,15 +55,16 @@
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(703, 537);
+            panel1.Size = new Size(579, 501);
             panel1.TabIndex = 0;
+            panel1.Paint += panel1_Paint;
             // 
             // txtConfirmarSenha
             // 
             txtConfirmarSenha.Anchor = AnchorStyles.None;
             txtConfirmarSenha.BackColor = SystemColors.HighlightText;
             txtConfirmarSenha.BorderStyle = BorderStyle.FixedSingle;
-            txtConfirmarSenha.Location = new Point(204, 401);
+            txtConfirmarSenha.Location = new Point(131, 364);
             txtConfirmarSenha.Name = "txtConfirmarSenha";
             txtConfirmarSenha.PasswordChar = '•';
             txtConfirmarSenha.Size = new Size(280, 24);
@@ -74,7 +75,7 @@
             btnCancelar.BackColor = SystemColors.ButtonHighlight;
             btnCancelar.Font = new Font("Microsoft PhagsPa", 10F, FontStyle.Bold, GraphicsUnit.Point);
             btnCancelar.ForeColor = SystemColors.Desktop;
-            btnCancelar.Location = new Point(227, 448);
+            btnCancelar.Location = new Point(131, 407);
             btnCancelar.Name = "btnCancelar";
             btnCancelar.Size = new Size(96, 30);
             btnCancelar.TabIndex = 3;
@@ -87,7 +88,7 @@
             btnMudarSenha.BackColor = SystemColors.ButtonHighlight;
             btnMudarSenha.Font = new Font("Microsoft PhagsPa", 10F, FontStyle.Bold, GraphicsUnit.Point);
             btnMudarSenha.ForeColor = SystemColors.Desktop;
-            btnMudarSenha.Location = new Point(369, 448);
+            btnMudarSenha.Location = new Point(315, 407);
             btnMudarSenha.Name = "btnMudarSenha";
             btnMudarSenha.Size = new Size(96, 30);
             btnMudarSenha.TabIndex = 4;
@@ -100,7 +101,7 @@
             txtNovaSenha.Anchor = AnchorStyles.None;
             txtNovaSenha.BackColor = SystemColors.HighlightText;
             txtNovaSenha.BorderStyle = BorderStyle.FixedSingle;
-            txtNovaSenha.Location = new Point(205, 338);
+            txtNovaSenha.Location = new Point(131, 301);
             txtNovaSenha.Name = "txtNovaSenha";
             txtNovaSenha.PasswordChar = '•';
             txtNovaSenha.Size = new Size(280, 24);
@@ -112,7 +113,7 @@
             label1.BackColor = SystemColors.ActiveCaption;
             label1.Font = new Font("Microsoft PhagsPa", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             label1.ForeColor = SystemColors.Desktop;
-            label1.Location = new Point(202, 322);
+            label1.Location = new Point(131, 285);
             label1.Name = "label1";
             label1.Size = new Size(84, 17);
             label1.TabIndex = 0;
@@ -123,7 +124,7 @@
             label2.AutoSize = true;
             label2.BackColor = SystemColors.ActiveCaption;
             label2.Font = new Font("Microsoft PhagsPa", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.Location = new Point(202, 385);
+            label2.Location = new Point(131, 346);
             label2.Name = "label2";
             label2.Size = new Size(148, 17);
             label2.TabIndex = 0;
@@ -133,7 +134,7 @@
             // 
             pictureBox1.Anchor = AnchorStyles.None;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(186, 22);
+            pictureBox1.Location = new Point(113, 11);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(332, 233);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
@@ -145,7 +146,7 @@
             AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Menu;
-            ClientSize = new Size(703, 537);
+            ClientSize = new Size(579, 501);
             Controls.Add(panel1);
             Font = new Font("Microsoft PhagsPa", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             Icon = (Icon)resources.GetObject("$this.Icon");

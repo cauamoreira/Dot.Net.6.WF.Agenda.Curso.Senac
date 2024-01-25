@@ -63,6 +63,16 @@ namespace Dot.Net._6.WF.Calendario.Senac.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap calendario {
+            get {
+                object obj = ResourceManager.GetObject("calendario", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap do_utilizador {
             get {
                 object obj = ResourceManager.GetObject("do-utilizador", resourceCulture);
