@@ -8223,6 +8223,7 @@
       "ClosedXML >= 0.102.1",
       "EPPlus >= 7.0.2",
       "Microsoft.Data.Sqlite >= 6.0.25",
+      "Microsoft.Data.Sqlite.Core >= 6.0.25",
       "Microsoft.EntityFrameworkCore >= 6.0.25",
       "Microsoft.EntityFrameworkCore.Design >= 6.0.25",
       "Microsoft.EntityFrameworkCore.Sqlite >= 6.0.25",
@@ -8230,29 +8231,25 @@
       "Microsoft.VisualStudio.OLE.Interop >= 17.8.37221",
       "OfficeOpenXml.Core.ExcelPackage >= 1.0.0",
       "System.Data.SQLite >= 1.0.118",
+      "System.Data.SQLite.Core >= 1.0.118",
       "System.IO.Pipelines >= 8.0.0",
       "System.IO.Pipes >= 4.3.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Aluno\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\caua.moreira\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Aluno\\source\\repos\\Dot.Net.6.WF.Agenda.Curso.Senac\\Dot.Net.6.WF.Calendario.Senac\\Dot.Net.6.WF.Calendario.Senac.csproj",
+      "projectUniqueName": "D:\\Dot.Net.6.WF.Agenda.Curso.Senac\\Dot.Net.6.WF.Agenda.Curso.Senac\\Dot.Net.6.WF.Calendario.Senac\\Dot.Net.6.WF.Calendario.Senac.csproj",
       "projectName": "Dot.Net.6.WF.Calendario.Senac",
-      "projectPath": "C:\\Users\\Aluno\\source\\repos\\Dot.Net.6.WF.Agenda.Curso.Senac\\Dot.Net.6.WF.Calendario.Senac\\Dot.Net.6.WF.Calendario.Senac.csproj",
-      "packagesPath": "C:\\Users\\Aluno\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Aluno\\source\\repos\\Dot.Net.6.WF.Agenda.Curso.Senac\\Dot.Net.6.WF.Calendario.Senac\\obj\\",
+      "projectPath": "D:\\Dot.Net.6.WF.Agenda.Curso.Senac\\Dot.Net.6.WF.Agenda.Curso.Senac\\Dot.Net.6.WF.Calendario.Senac\\Dot.Net.6.WF.Calendario.Senac.csproj",
+      "packagesPath": "C:\\Users\\caua.moreira\\.nuget\\packages\\",
+      "outputPath": "D:\\Dot.Net.6.WF.Agenda.Curso.Senac\\Dot.Net.6.WF.Agenda.Curso.Senac\\Dot.Net.6.WF.Calendario.Senac\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Aluno\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\caua.moreira\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -8260,7 +8257,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -8288,6 +8284,10 @@
             "version": "[7.0.2, )"
           },
           "Microsoft.Data.Sqlite": {
+            "target": "Package",
+            "version": "[6.0.25, )"
+          },
+          "Microsoft.Data.Sqlite.Core": {
             "target": "Package",
             "version": "[6.0.25, )"
           },
@@ -8323,6 +8323,10 @@
             "target": "Package",
             "version": "[1.0.118, )"
           },
+          "System.Data.SQLite.Core": {
+            "target": "Package",
+            "version": "[1.0.118, )"
+          },
           "System.IO.Pipelines": {
             "target": "Package",
             "version": "[8.0.0, )"
@@ -8351,7 +8355,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   }

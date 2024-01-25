@@ -11,6 +11,7 @@
           "ClosedXML": "0.102.1",
           "EPPlus": "7.0.2",
           "Microsoft.Data.Sqlite": "6.0.25",
+          "Microsoft.Data.Sqlite.Core": "6.0.25",
           "Microsoft.EntityFrameworkCore": "6.0.25",
           "Microsoft.EntityFrameworkCore.Design": "6.0.25",
           "Microsoft.EntityFrameworkCore.Sqlite": "6.0.25",
@@ -18,6 +19,7 @@
           "Microsoft.VisualStudio.OLE.Interop": "17.8.37221",
           "OfficeOpenXml.Core.ExcelPackage": "1.0.0",
           "System.Data.SQLite": "1.0.118",
+          "System.Data.SQLite.Core": "1.0.118",
           "System.IO.Pipelines": "8.0.0",
           "System.IO.Pipes": "4.3.0"
         },
