@@ -44,7 +44,6 @@
             panel1 = new Panel();
             btnExcluirCurso = new Button();
             btnAlterarCurso = new Button();
-            btnSairCurso = new Button();
             btnAdicionarCurso = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)GridViewCadastroCurso).BeginInit();
@@ -190,7 +189,6 @@
             panel1.BorderStyle = BorderStyle.FixedSingle;
             panel1.Controls.Add(btnExcluirCurso);
             panel1.Controls.Add(btnAlterarCurso);
-            panel1.Controls.Add(btnSairCurso);
             panel1.Controls.Add(btnAdicionarCurso);
             panel1.Controls.Add(GridViewCadastroCurso);
             panel1.Controls.Add(pictureBox1);
@@ -215,7 +213,7 @@
             // 
             btnExcluirCurso.Anchor = AnchorStyles.Bottom;
             btnExcluirCurso.Font = new Font("Microsoft PhagsPa", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            btnExcluirCurso.Location = new Point(381, 550);
+            btnExcluirCurso.Location = new Point(454, 557);
             btnExcluirCurso.Name = "btnExcluirCurso";
             btnExcluirCurso.Size = new Size(96, 30);
             btnExcluirCurso.TabIndex = 4;
@@ -227,7 +225,7 @@
             // 
             btnAlterarCurso.Anchor = AnchorStyles.Bottom;
             btnAlterarCurso.Font = new Font("Microsoft PhagsPa", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            btnAlterarCurso.Location = new Point(217, 550);
+            btnAlterarCurso.Location = new Point(290, 557);
             btnAlterarCurso.Name = "btnAlterarCurso";
             btnAlterarCurso.Size = new Size(96, 30);
             btnAlterarCurso.TabIndex = 3;
@@ -235,23 +233,11 @@
             btnAlterarCurso.UseVisualStyleBackColor = true;
             btnAlterarCurso.Click += btnAlterarCurso_Click;
             // 
-            // btnSairCurso
-            // 
-            btnSairCurso.Anchor = AnchorStyles.Bottom;
-            btnSairCurso.Font = new Font("Microsoft PhagsPa", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            btnSairCurso.Location = new Point(546, 550);
-            btnSairCurso.Name = "btnSairCurso";
-            btnSairCurso.Size = new Size(96, 30);
-            btnSairCurso.TabIndex = 5;
-            btnSairCurso.Text = "Sair";
-            btnSairCurso.UseVisualStyleBackColor = true;
-            btnSairCurso.Click += btnSairCurso_Click;
-            // 
             // btnAdicionarCurso
             // 
             btnAdicionarCurso.Anchor = AnchorStyles.Bottom;
             btnAdicionarCurso.Font = new Font("Microsoft PhagsPa", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            btnAdicionarCurso.Location = new Point(56, 550);
+            btnAdicionarCurso.Location = new Point(129, 557);
             btnAdicionarCurso.Name = "btnAdicionarCurso";
             btnAdicionarCurso.Size = new Size(96, 30);
             btnAdicionarCurso.TabIndex = 2;
@@ -297,7 +283,6 @@
         private DataGridViewTextBoxColumn Column1;
         private Button btnAlterar;
         private Panel panel1;
-        private Button btnSairCurso;
         private Button btnAdicionarCurso;
         private Button btnExcluirCurso;
         private Button btnAlterarCurso;

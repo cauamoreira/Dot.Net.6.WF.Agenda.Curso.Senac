@@ -127,6 +127,28 @@
                 txtSenha.PasswordChar = '\u25CF';
             }
         }
+
+        private void TelaLogin_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (e.CloseReason == CloseReason.UserClosing)
+            {
+                DialogResult iSair = MessageBox.Show("Deseja fechar o programa?",
+                                                    "Agenda de Cursos",
+                                                    MessageBoxButtons.YesNo,
+                                                    MessageBoxIcon.Question);
+
+                if (iSair == DialogResult.No)
+                {
+                    e.Cancel = true;
+                }
+                else
+                {
+
+                    Application.Exit();
+                    
+                }
+            }
+        }
     }
 }
 

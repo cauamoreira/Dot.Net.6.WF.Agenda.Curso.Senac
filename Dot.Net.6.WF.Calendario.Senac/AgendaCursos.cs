@@ -713,7 +713,7 @@ namespace Dot.Net._6.WF.Calendario.Senac
         {
             if (e.CloseReason == CloseReason.UserClosing)
             {
-                DialogResult iSair = MessageBox.Show("Deseja fechar o programa?",
+                DialogResult iSair = MessageBox.Show("Deseja realmente sair?",
                                                     "Agenda de Cursos",
                                                     MessageBoxButtons.YesNo,
                                                     MessageBoxIcon.Question);

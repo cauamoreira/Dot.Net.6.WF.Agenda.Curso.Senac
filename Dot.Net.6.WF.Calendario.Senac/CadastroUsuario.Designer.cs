@@ -42,7 +42,6 @@
             chkAtivo = new CheckBox();
             chkAdministrador = new CheckBox();
             btnAdicionarUsuario = new Button();
-            btnSair = new Button();
             btnAlterar = new Button();
             GridConsultarUsuario = new DataGridView();
             Column1 = new DataGridViewTextBoxColumn();
@@ -189,7 +188,7 @@
             // btnAdicionarUsuario
             // 
             btnAdicionarUsuario.Font = new Font("Microsoft PhagsPa", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            btnAdicionarUsuario.Location = new Point(50, 441);
+            btnAdicionarUsuario.Location = new Point(136, 432);
             btnAdicionarUsuario.Margin = new Padding(3, 2, 3, 2);
             btnAdicionarUsuario.Name = "btnAdicionarUsuario";
             btnAdicionarUsuario.Size = new Size(96, 30);
@@ -198,22 +197,10 @@
             btnAdicionarUsuario.UseVisualStyleBackColor = true;
             btnAdicionarUsuario.Click += btnSalvarUsuario_Click;
             // 
-            // btnSair
-            // 
-            btnSair.Font = new Font("Microsoft PhagsPa", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            btnSair.Location = new Point(542, 441);
-            btnSair.Margin = new Padding(3, 2, 3, 2);
-            btnSair.Name = "btnSair";
-            btnSair.Size = new Size(96, 30);
-            btnSair.TabIndex = 11;
-            btnSair.Text = "Sair";
-            btnSair.UseVisualStyleBackColor = true;
-            btnSair.Click += btnSair_Click;
-            // 
             // btnAlterar
             // 
             btnAlterar.Font = new Font("Microsoft PhagsPa", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            btnAlterar.Location = new Point(203, 441);
+            btnAlterar.Location = new Point(289, 432);
             btnAlterar.Margin = new Padding(3, 2, 3, 2);
             btnAlterar.Name = "btnAlterar";
             btnAlterar.Size = new Size(96, 30);
@@ -305,7 +292,7 @@
             // btnExcluir
             // 
             btnExcluir.Font = new Font("Microsoft PhagsPa", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            btnExcluir.Location = new Point(366, 441);
+            btnExcluir.Location = new Point(452, 432);
             btnExcluir.Margin = new Padding(3, 2, 3, 2);
             btnExcluir.Name = "btnExcluir";
             btnExcluir.Size = new Size(96, 30);
@@ -328,7 +315,6 @@
             panel1.Controls.Add(btnExcluir);
             panel1.Controls.Add(label3);
             panel1.Controls.Add(chkAtivo);
-            panel1.Controls.Add(btnSair);
             panel1.Controls.Add(txtId);
             panel1.Controls.Add(btnAdicionarUsuario);
             panel1.Controls.Add(txtUsuario);
@@ -339,7 +325,7 @@
             panel1.Location = new Point(-2, -2);
             panel1.MaximumSize = new Size(1920, 1080);
             panel1.Name = "panel1";
-            panel1.Size = new Size(708, 541);
+            panel1.Size = new Size(708, 493);
             panel1.TabIndex = 13;
             // 
             // dtpDataNascimento
@@ -357,7 +343,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaption;
             BackgroundImageLayout = ImageLayout.None;
-            ClientSize = new Size(703, 537);
+            ClientSize = new Size(703, 494);
             Controls.Add(panel1);
             DoubleBuffered = true;
             Icon = (Icon)resources.GetObject("$this.Icon");
@@ -391,7 +377,6 @@
         private CheckBox chkAtivo;
         private CheckBox chkAdministrador;
         private Button btnAdicionarUsuario;
-        private Button btnSair;
         private Button btnAlterar;
         private DataGridView GridConsultarUsuario;
         private Button btnExcluir;

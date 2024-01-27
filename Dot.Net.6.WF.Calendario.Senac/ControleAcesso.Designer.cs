@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ControleAcesso));
             panel1 = new Panel();
-            btnSair = new Button();
             gridHistorico = new DataGridView();
             Column1 = new DataGridViewTextBoxColumn();
             Column2 = new DataGridViewTextBoxColumn();
@@ -43,23 +42,11 @@
             // 
             // panel1
             // 
-            panel1.Controls.Add(btnSair);
             panel1.Controls.Add(gridHistorico);
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
             panel1.Size = new Size(713, 419);
             panel1.TabIndex = 0;
-            // 
-            // btnSair
-            // 
-            btnSair.Font = new Font("Microsoft PhagsPa", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            btnSair.Location = new Point(280, 359);
-            btnSair.Name = "btnSair";
-            btnSair.Size = new Size(96, 30);
-            btnSair.TabIndex = 2;
-            btnSair.Text = "Sair";
-            btnSair.UseVisualStyleBackColor = true;
-            btnSair.Click += btnSair_Click;
             // 
             // gridHistorico
             // 
@@ -72,7 +59,7 @@
             gridHistorico.ReadOnly = true;
             gridHistorico.RowHeadersWidth = 51;
             gridHistorico.RowTemplate.Height = 25;
-            gridHistorico.Size = new Size(864, 328);
+            gridHistorico.Size = new Size(713, 328);
             gridHistorico.TabIndex = 1;
             // 
             // Column1
@@ -143,7 +130,6 @@
 
         private Panel panel1;
         private DataGridView gridHistorico;
-        private Button btnSair;
         private DataGridViewTextBoxColumn Column1;
         private DataGridViewTextBoxColumn Column2;
         private DataGridViewTextBoxColumn Column3;

@@ -480,7 +480,7 @@ namespace Dot.Net._6.WF.Calendario.Senac
 
             if (e.CloseReason == CloseReason.UserClosing)
             {
-                DialogResult fechar = MessageBox.Show("Deseja realmente fechar?",
+                DialogResult fechar = MessageBox.Show("Deseja realmente sair?",
                                                     "Cadastro de Usuário",
                                                     MessageBoxButtons.YesNo,
                                                     MessageBoxIcon.Question);

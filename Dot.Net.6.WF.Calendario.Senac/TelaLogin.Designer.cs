@@ -198,6 +198,7 @@
             ShowIcon = false;
             StartPosition = FormStartPosition.CenterScreen;
             Text = "SENAC";
+            FormClosing += TelaLogin_FormClosing;
             KeyDown += TelaLogin_KeyDown;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();

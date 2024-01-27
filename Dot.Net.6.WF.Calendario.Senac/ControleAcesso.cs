@@ -49,26 +49,30 @@ namespace Dot.Net._6.WF.Calendario.Senac
             Agenda_de_Curso agenda_De_Curso = new Agenda_de_Curso();
             agenda_De_Curso.Show();
         }
-        private void btnSair_Click(object sender, EventArgs e)
-        {
-            var fechar = MessageBox.Show("Deseja realmente sair?",
-            "Alerta",
-            MessageBoxButtons.YesNo,
-            MessageBoxIcon.Warning);
-
-            if (fechar == DialogResult.Yes)
-            {
-                AbrirFormAgenda();
-                this.Close();
-            }
-        }
+       
 
         private void ControleAcesso_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Agenda_de_Curso agenda_De_Curso = new Agenda_de_Curso();
-            agenda_De_Curso.Show();
+            if (e.CloseReason == CloseReason.UserClosing)
+            {
+                DialogResult iSair = MessageBox.Show("Deseja realmente sair?",
+                                                    "Agenda de Cursos",
+                                                    MessageBoxButtons.YesNo,
+                                                    MessageBoxIcon.Question);
+
+                if (iSair == DialogResult.No)
+                {
+                    e.Cancel = true;
+                }
+                else
+                {
+
+                    AbrirFormAgenda();
+                    this.Hide();
+                }
+            }
         }
 
-        }
     }
+}
 

@@ -138,20 +138,7 @@ namespace Dot.Net._6.WF.Calendario.Senac
                 }
             }
         }
-
-        private void iSair()
-        {
-            
-                AbrirFormAgendaCurso();
-                this.Hide();
-            
-
-        }
-
-        private void btnSairCurso_Click(object sender, EventArgs e)
-        {
-            iSair();
-        }
+     
 
         private void btnAlterarCurso_Click(object sender, EventArgs e)
         {
@@ -226,10 +213,25 @@ namespace Dot.Net._6.WF.Calendario.Senac
         {
             if (e.CloseReason == CloseReason.UserClosing)
             {
-                Application.Exit();
+                DialogResult iSair = MessageBox.Show("Deseja realmente sair?",
+                                                    "Agenda de Cursos",
+                                                    MessageBoxButtons.YesNo,
+                                                    MessageBoxIcon.Question);
+
+                if (iSair == DialogResult.No)
+                {
+                    e.Cancel = true;
+                }
+                else
+                {
+
+                    AbrirFormAgendaCurso();
+                    this.Hide();
+                }
             }
         }
     }
 }
+
 
 
