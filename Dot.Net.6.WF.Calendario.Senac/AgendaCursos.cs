@@ -456,24 +456,7 @@ namespace Dot.Net._6.WF.Calendario.Senac
             TelaLogin telaLogin = new TelaLogin();
             telaLogin.Show();
         }
-        private void iSair()
-        {
-            DialogResult iSair;
-            iSair = MessageBox.Show("Deseja realmente sair?",
-                "Agenda de Cursos",
-                MessageBoxButtons.YesNo,
-                MessageBoxIcon.Warning);
-
-            if (iSair == DialogResult.Yes)
-            {
-                LogOut();
-                this.Close();
-            }
-        }
-        private void btnSair_Click_1(object sender, EventArgs e)
-        {
-            iSair();
-        }
+       
 
         private void adicionarToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -481,11 +464,27 @@ namespace Dot.Net._6.WF.Calendario.Senac
         }
 
 
+        private void Sair()
+        {
+            DialogResult iSair = MessageBox.Show("Deseja fechar o programa?",
+                                                   "Agenda de Cursos",
+                                                   MessageBoxButtons.YesNo,
+                                                   MessageBoxIcon.Question);
 
+            if (iSair == DialogResult.Yes)
+            {                           
+
+                LogOut();
+                this.Hide();
+            }
+        }
+    
         private void sairToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            iSair();
+            Sair();
+               
         }
+    
 
 
         private void btnLimparCampos_Click(object sender, EventArgs e)
@@ -726,7 +725,8 @@ namespace Dot.Net._6.WF.Calendario.Senac
                 else
                 {
 
-                    Application.Exit();
+                    LogOut();
+                    this.Hide();
                 }
             }
         }
