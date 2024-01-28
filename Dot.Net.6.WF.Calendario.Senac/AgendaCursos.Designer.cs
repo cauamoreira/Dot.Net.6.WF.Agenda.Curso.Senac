@@ -87,6 +87,7 @@
             btnLimparCampos = new Button();
             btnAlterar = new Button();
             btnExcluir = new Button();
+            btnSair = new Button();
             menuStrip1.SuspendLayout();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)gridCurso).BeginInit();
@@ -424,6 +425,7 @@
             // 
             panel1.AutoSize = true;
             panel1.BorderStyle = BorderStyle.FixedSingle;
+            panel1.Controls.Add(btnSair);
             panel1.Controls.Add(clbDias);
             panel1.Controls.Add(label2);
             panel1.Controls.Add(txtPesquisar);
@@ -629,7 +631,7 @@
             // 
             btnExportar.Anchor = AnchorStyles.Bottom;
             btnExportar.Font = new Font("Microsoft PhagsPa", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            btnExportar.Location = new Point(1013, 771);
+            btnExportar.Location = new Point(922, 773);
             btnExportar.Margin = new Padding(3, 4, 3, 4);
             btnExportar.Name = "btnExportar";
             btnExportar.Size = new Size(110, 40);
@@ -652,7 +654,7 @@
             // 
             btnAdicionar.Anchor = AnchorStyles.Bottom;
             btnAdicionar.Font = new Font("Microsoft PhagsPa", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            btnAdicionar.Location = new Point(255, 771);
+            btnAdicionar.Location = new Point(164, 773);
             btnAdicionar.Margin = new Padding(3, 4, 3, 4);
             btnAdicionar.Name = "btnAdicionar";
             btnAdicionar.Size = new Size(110, 40);
@@ -665,7 +667,7 @@
             // 
             btnLimparCampos.Anchor = AnchorStyles.Bottom;
             btnLimparCampos.Font = new Font("Microsoft PhagsPa", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            btnLimparCampos.Location = new Point(444, 771);
+            btnLimparCampos.Location = new Point(353, 773);
             btnLimparCampos.Margin = new Padding(3, 4, 3, 4);
             btnLimparCampos.Name = "btnLimparCampos";
             btnLimparCampos.Size = new Size(110, 40);
@@ -678,7 +680,7 @@
             // 
             btnAlterar.Anchor = AnchorStyles.Bottom;
             btnAlterar.Font = new Font("Microsoft PhagsPa", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            btnAlterar.Location = new Point(821, 771);
+            btnAlterar.Location = new Point(730, 773);
             btnAlterar.Margin = new Padding(3, 4, 3, 4);
             btnAlterar.Name = "btnAlterar";
             btnAlterar.Size = new Size(110, 40);
@@ -691,7 +693,7 @@
             // 
             btnExcluir.Anchor = AnchorStyles.Bottom;
             btnExcluir.Font = new Font("Microsoft PhagsPa", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            btnExcluir.Location = new Point(628, 771);
+            btnExcluir.Location = new Point(537, 773);
             btnExcluir.Margin = new Padding(3, 4, 3, 4);
             btnExcluir.Name = "btnExcluir";
             btnExcluir.Size = new Size(110, 40);
@@ -699,6 +701,19 @@
             btnExcluir.Text = "Excluir";
             btnExcluir.UseVisualStyleBackColor = true;
             btnExcluir.Click += btnExcluir_Click_1;
+            // 
+            // btnSair
+            // 
+            btnSair.Anchor = AnchorStyles.Bottom;
+            btnSair.Font = new Font("Microsoft PhagsPa", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            btnSair.Location = new Point(1115, 773);
+            btnSair.Margin = new Padding(3, 4, 3, 4);
+            btnSair.Name = "btnSair";
+            btnSair.Size = new Size(110, 40);
+            btnSair.TabIndex = 38;
+            btnSair.Text = "Sair";
+            btnSair.UseVisualStyleBackColor = true;
+            btnSair.Click += btnSair_Click;
             // 
             // Agenda_de_Curso
             // 
@@ -787,5 +802,6 @@
         private DataGridViewTextBoxColumn ColunaCursoValor;
         private DataGridViewTextBoxColumn ColunaCursoTurma;
         private DataGridViewTextBoxColumn ColunaCursoSala;
+        private Button btnSair;
     }
 }

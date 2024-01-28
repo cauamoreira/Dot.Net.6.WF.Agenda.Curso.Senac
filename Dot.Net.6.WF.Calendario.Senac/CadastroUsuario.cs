@@ -46,7 +46,7 @@ namespace Dot.Net._6.WF.Calendario.Senac
             {
                 if (!bd.Usuarios.Any())
                 {
-                    
+
                     bd.Usuarios.Add(new Usuario
                     {
                         Login = "admin",
@@ -492,11 +492,16 @@ namespace Dot.Net._6.WF.Calendario.Senac
                 else
                 {
 
-                    Agenda_de_Curso agenda_De_Curso = new Agenda_de_Curso();
-                    agenda_De_Curso.Show();
+                    AbrirAgendaCursos();
                     this.Hide();
                 }
             }
+        }
+
+        private void btnVoltaAgenda_Click(object sender, EventArgs e)
+        {
+            AbrirAgendaCursos();
+            this.Hide();
         }
     }
 }

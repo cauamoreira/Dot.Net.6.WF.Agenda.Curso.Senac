@@ -40,7 +40,7 @@ namespace Dot.Net._6.WF.Calendario.Senac
 
         private void iAdicionar()
         {
-         
+
             if (CamposObrigatorios())
                 return;
 
@@ -77,8 +77,8 @@ namespace Dot.Net._6.WF.Calendario.Senac
 
                 AdicionarHistorico(bd, nome);
                 AdicionarCurso(bd, curso);
-               
-                LimparCheckBoxes(); 
+
+                LimparCheckBoxes();
 
                 MessageBox.Show("Curso adicionado com sucesso.",
                     "Agenda de Cursos", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -90,7 +90,7 @@ namespace Dot.Net._6.WF.Calendario.Senac
 
         }
 
-       
+
         private void AdicionarHistorico(BancoDeDados bd, string nome)
         {
             bd.Historicos.Add(new Historico
@@ -101,11 +101,11 @@ namespace Dot.Net._6.WF.Calendario.Senac
                 Detalhes = $"Adicionado curso: {nome}"
             });
         }
-      
+
 
         private void LimparCheckBoxes()
         {
-           
+
             foreach (int index in clbDias.CheckedIndices)
             {
                 clbDias.SetItemChecked(index, false);
@@ -336,7 +336,7 @@ namespace Dot.Net._6.WF.Calendario.Senac
                     var diasSelecionados = clbDias.CheckedItems.OfType<string>().ToList();
                     curso.Dias = string.Join(", ", diasSelecionados);
 
-                    
+
                     curso.Horario = cmbHorario.Text;
                     curso.Meta = txtMeta.Text;
                     curso.Realizado = txtRealizado.Text;
@@ -344,7 +344,7 @@ namespace Dot.Net._6.WF.Calendario.Senac
                     curso.Turma = txtTurma.Text;
                     curso.Sala = txtSala.Text;
 
-                   
+
 
                     var mesmoHorario = bd.AgendaCursos
                         .Any(c =>
@@ -353,8 +353,8 @@ namespace Dot.Net._6.WF.Calendario.Senac
                             c.Sala == curso.Sala &&
                             c.Horario == curso.Horario &&
                             c.Inicio.Date == curso.Inicio.Date);
-                  
-                   
+
+
 
                     if (mesmoHorario)
                     {
@@ -387,7 +387,7 @@ namespace Dot.Net._6.WF.Calendario.Senac
                     AdicionarHistorico(bd, turmaOriginal, curso.Turma, "Turma");
                     AdicionarHistorico(bd, salaOriginal, curso.Sala, "Sala");
 
-                    
+
                     DialogResult resultado = MessageBox.Show("Deseja realmente alterar?", "Agenda de Cursos", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
                     if (resultado == DialogResult.Yes)
@@ -456,7 +456,7 @@ namespace Dot.Net._6.WF.Calendario.Senac
             TelaLogin telaLogin = new TelaLogin();
             telaLogin.Show();
         }
-       
+
 
         private void adicionarToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -466,25 +466,25 @@ namespace Dot.Net._6.WF.Calendario.Senac
 
         private void Sair()
         {
-            DialogResult iSair = MessageBox.Show("Deseja fechar o programa?",
+            DialogResult iSair = MessageBox.Show("Deseja realmente sair?",
                                                    "Agenda de Cursos",
                                                    MessageBoxButtons.YesNo,
                                                    MessageBoxIcon.Question);
 
             if (iSair == DialogResult.Yes)
-            {                           
+            {
 
                 LogOut();
                 this.Hide();
             }
         }
-    
+
         private void sairToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Sair();
-               
+
         }
-    
+
 
 
         private void btnLimparCampos_Click(object sender, EventArgs e)
@@ -745,7 +745,11 @@ namespace Dot.Net._6.WF.Calendario.Senac
             }
         }
 
+        private void btnSair_Click(object sender, EventArgs e)
+        {
+            Sair();
 
+        }
     }
 }
 

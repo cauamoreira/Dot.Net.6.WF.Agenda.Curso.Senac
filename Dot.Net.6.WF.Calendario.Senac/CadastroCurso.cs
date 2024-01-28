@@ -138,7 +138,7 @@ namespace Dot.Net._6.WF.Calendario.Senac
                 }
             }
         }
-     
+
 
         private void btnAlterarCurso_Click(object sender, EventArgs e)
         {
@@ -229,6 +229,12 @@ namespace Dot.Net._6.WF.Calendario.Senac
                     this.Hide();
                 }
             }
+        }
+
+        private void btnVoltarAgenda_Click(object sender, EventArgs e)
+        {
+            AbrirFormAgendaCurso();
+            this.Hide();
         }
     }
 }

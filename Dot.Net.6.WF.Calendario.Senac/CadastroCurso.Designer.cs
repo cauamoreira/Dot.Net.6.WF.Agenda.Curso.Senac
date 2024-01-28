@@ -42,6 +42,7 @@
             Column1 = new DataGridViewTextBoxColumn();
             btnAlterar = new Button();
             panel1 = new Panel();
+            btnVoltarAgenda = new Button();
             btnExcluirCurso = new Button();
             btnAlterarCurso = new Button();
             btnAdicionarCurso = new Button();
@@ -54,9 +55,9 @@
             // 
             lblId.AutoSize = true;
             lblId.Font = new Font("Microsoft PhagsPa", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            lblId.Location = new Point(645, 252);
+            lblId.Location = new Point(632, 250);
             lblId.Name = "lblId";
-            lblId.Size = new Size(26, 18);
+            lblId.Size = new Size(33, 22);
             lblId.TabIndex = 0;
             lblId.Text = "ID:";
             lblId.Visible = false;
@@ -68,7 +69,7 @@
             txtId.Margin = new Padding(3, 5, 3, 5);
             txtId.Name = "txtId";
             txtId.ReadOnly = true;
-            txtId.Size = new Size(26, 26);
+            txtId.Size = new Size(26, 30);
             txtId.TabIndex = 0;
             txtId.Visible = false;
             // 
@@ -77,19 +78,19 @@
             txtCadastroCurso.BackColor = SystemColors.HighlightText;
             txtCadastroCurso.BorderStyle = BorderStyle.FixedSingle;
             txtCadastroCurso.Font = new Font("Microsoft PhagsPa", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
-            txtCadastroCurso.Location = new Point(1, 248);
+            txtCadastroCurso.Location = new Point(1, 245);
             txtCadastroCurso.Margin = new Padding(3, 5, 3, 5);
             txtCadastroCurso.Name = "txtCadastroCurso";
-            txtCadastroCurso.Size = new Size(312, 25);
+            txtCadastroCurso.Size = new Size(312, 29);
             txtCadastroCurso.TabIndex = 1;
             // 
             // label
             // 
             label.AutoSize = true;
             label.Font = new Font("Microsoft PhagsPa", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            label.Location = new Point(2, 230);
+            label.Location = new Point(2, 223);
             label.Name = "label";
-            label.Size = new Size(117, 18);
+            label.Size = new Size(139, 22);
             label.TabIndex = 0;
             label.Text = "Adicionar curso:";
             // 
@@ -161,7 +162,7 @@
             Column2.MinimumWidth = 6;
             Column2.Name = "Column2";
             Column2.ReadOnly = true;
-            Column2.Width = 42;
+            Column2.Width = 49;
             // 
             // Column1
             // 
@@ -187,6 +188,7 @@
             panel1.AutoSize = true;
             panel1.BackColor = SystemColors.ActiveCaption;
             panel1.BorderStyle = BorderStyle.FixedSingle;
+            panel1.Controls.Add(btnVoltarAgenda);
             panel1.Controls.Add(btnExcluirCurso);
             panel1.Controls.Add(btnAlterarCurso);
             panel1.Controls.Add(btnAdicionarCurso);
@@ -209,13 +211,25 @@
             panel1.Size = new Size(708, 620);
             panel1.TabIndex = 0;
             // 
+            // btnVoltarAgenda
+            // 
+            btnVoltarAgenda.Anchor = AnchorStyles.Bottom;
+            btnVoltarAgenda.Font = new Font("Microsoft PhagsPa", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            btnVoltarAgenda.Location = new Point(546, 557);
+            btnVoltarAgenda.Name = "btnVoltarAgenda";
+            btnVoltarAgenda.Size = new Size(110, 40);
+            btnVoltarAgenda.TabIndex = 9;
+            btnVoltarAgenda.Text = "Sair";
+            btnVoltarAgenda.UseVisualStyleBackColor = true;
+            btnVoltarAgenda.Click += btnVoltarAgenda_Click;
+            // 
             // btnExcluirCurso
             // 
             btnExcluirCurso.Anchor = AnchorStyles.Bottom;
             btnExcluirCurso.Font = new Font("Microsoft PhagsPa", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            btnExcluirCurso.Location = new Point(454, 557);
+            btnExcluirCurso.Location = new Point(370, 557);
             btnExcluirCurso.Name = "btnExcluirCurso";
-            btnExcluirCurso.Size = new Size(96, 30);
+            btnExcluirCurso.Size = new Size(110, 40);
             btnExcluirCurso.TabIndex = 4;
             btnExcluirCurso.Text = "Excluir";
             btnExcluirCurso.UseVisualStyleBackColor = true;
@@ -225,9 +239,9 @@
             // 
             btnAlterarCurso.Anchor = AnchorStyles.Bottom;
             btnAlterarCurso.Font = new Font("Microsoft PhagsPa", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            btnAlterarCurso.Location = new Point(290, 557);
+            btnAlterarCurso.Location = new Point(206, 557);
             btnAlterarCurso.Name = "btnAlterarCurso";
-            btnAlterarCurso.Size = new Size(96, 30);
+            btnAlterarCurso.Size = new Size(110, 40);
             btnAlterarCurso.TabIndex = 3;
             btnAlterarCurso.Text = "Alterar";
             btnAlterarCurso.UseVisualStyleBackColor = true;
@@ -237,9 +251,9 @@
             // 
             btnAdicionarCurso.Anchor = AnchorStyles.Bottom;
             btnAdicionarCurso.Font = new Font("Microsoft PhagsPa", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            btnAdicionarCurso.Location = new Point(129, 557);
+            btnAdicionarCurso.Location = new Point(45, 557);
             btnAdicionarCurso.Name = "btnAdicionarCurso";
-            btnAdicionarCurso.Size = new Size(96, 30);
+            btnAdicionarCurso.Size = new Size(110, 40);
             btnAdicionarCurso.TabIndex = 2;
             btnAdicionarCurso.Text = "Adicionar";
             btnAdicionarCurso.UseVisualStyleBackColor = true;
@@ -247,7 +261,7 @@
             // 
             // CadastroCurso
             // 
-            AutoScaleDimensions = new SizeF(8F, 19F);
+            AutoScaleDimensions = new SizeF(9F, 23F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Menu;
             ClientSize = new Size(708, 620);
@@ -286,5 +300,6 @@
         private Button btnAdicionarCurso;
         private Button btnExcluirCurso;
         private Button btnAlterarCurso;
+        private Button btnVoltarAgenda;
     }
 }
