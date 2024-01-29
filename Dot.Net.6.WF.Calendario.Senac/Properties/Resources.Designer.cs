@@ -93,6 +93,16 @@ namespace Dot.Net._6.WF.Calendario.Senac.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap esconder1 {
+            get {
+                object obj = ResourceManager.GetObject("esconder1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap hide {
             get {
                 object obj = ResourceManager.GetObject("hide", resourceCulture);
@@ -176,6 +186,16 @@ namespace Dot.Net._6.WF.Calendario.Senac.Properties {
         internal static System.Drawing.Bitmap visualizar {
             get {
                 object obj = ResourceManager.GetObject("visualizar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap visualizar1 {
+            get {
+                object obj = ResourceManager.GetObject("visualizar1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

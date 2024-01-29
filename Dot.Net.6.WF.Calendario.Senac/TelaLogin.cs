@@ -10,7 +10,7 @@
             InitializeComponent();
             txtUsuario.Focus();
             picLoading.Hide();
-            picSenha.Click += picSenha_Click;
+        
 
         }
 
@@ -111,22 +111,22 @@
             esqueceuSenha.Show();
         }
 
-        private void picSenha_Click(object sender, EventArgs e)
-        {
+        //private void picSenha_Click(object sender, EventArgs e)
+        //{
 
-            _podeVerSenha = !_podeVerSenha;
+        //    _podeVerSenha = !_podeVerSenha;
 
-            if (_podeVerSenha)
-            {
-                picSenha.Image = Properties.Resources.esconder;
-                txtSenha.PasswordChar = '\0';
-            }
-            else
-            {
-                picSenha.Image = Properties.Resources.visualizar;
-                txtSenha.PasswordChar = '\u25CF';
-            }
-        }
+        //    if (_podeVerSenha)
+        //    {
+        //        picSenha.Image = Properties.Resources.esconder;
+        //        txtSenha.PasswordChar = '•';
+        //    }
+        //    else
+        //    {
+        //        picSenha.Image = Properties.Resources.visualizar;
+        //        txtSenha.PasswordChar = '\0';
+        //    }
+        //}
 
         private void TelaLogin_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -145,8 +145,36 @@
                 {
 
                     Application.Exit();
-                    
+
                 }
+            }
+        }
+
+      
+
+        private async void picSenha_Click(object sender, EventArgs e)
+        {
+            _podeVerSenha = !_podeVerSenha;
+
+            if (_podeVerSenha)
+            {
+                picSenha.Image = Properties.Resources.visualizar;
+                txtSenha.PasswordChar = '\0'; 
+            }
+            else
+            {
+                picSenha.Image = Properties.Resources.esconder;
+                txtSenha.PasswordChar = '•';
+
+                
+                await Task.Delay(1000);
+
+                
+                if (_podeVerSenha)
+                    return;
+
+                
+                txtSenha.PasswordChar = '•';
             }
         }
     }

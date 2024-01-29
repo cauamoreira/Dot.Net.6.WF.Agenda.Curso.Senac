@@ -130,7 +130,6 @@
             // pictureBox1
             // 
             pictureBox1.BackgroundImageLayout = ImageLayout.Center;
-            pictureBox1.BorderStyle = BorderStyle.FixedSingle;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
             pictureBox1.Location = new Point(190, 24);
             pictureBox1.Name = "pictureBox1";
