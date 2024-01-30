@@ -24,11 +24,13 @@ namespace Dot.Net._6.WF.Calendario.Senac
 
             using (var bd = new BancoDeDados())
             {
+               // Verificar se existe um usuário com o CPF e data de nascimento 
                 var usuario = bd.Usuarios.FirstOrDefault(u => u.Cpf == CpfDigitado &&
                 u.DataNascimento == dataNascimento);
 
                 if (usuario != null)
                 {
+                    // Fechar a janela atual e abrir o form para definir nova senha
                     this.Close();
                     AbrirNovaSenha(usuario);
 
@@ -68,8 +70,10 @@ namespace Dot.Net._6.WF.Calendario.Senac
             }
         }
 
+        // Evento acionado ao alterar o texto no campo do CPF para formatar o valor
         private void txtCpfUsuario_TextChanged(object sender, EventArgs e)
         {
+            // Formatando o CPF enquanto o usuário digita
             string cpfDigito = new string(txtCpfUsuario.Text.Where(char.IsDigit).ToArray());
 
 

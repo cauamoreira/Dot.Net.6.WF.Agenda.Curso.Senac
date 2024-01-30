@@ -41,14 +41,17 @@ namespace Dot.Net._6.WF.Calendario.Senac
 
         private void btnMudarSenha_Click(object sender, EventArgs e)
         {
+            // Verificar se as senhas digitadas são compatíveis
             if (txtNovaSenha.Text == txtConfirmarSenha.Text)
             {
+                // Atualizar a senha do usuário no banco de dados
                 usuario.Senha = txtConfirmarSenha.Text;
 
                 using (var bd = new BancoDeDados())
                 {
                     bd.Entry(usuario).State = EntityState.Modified;
 
+                    // Registrar a alteração de senha no histórico
                     bd.Historicos.Add(new Historico
                     {
                         Login = usuario.Login,

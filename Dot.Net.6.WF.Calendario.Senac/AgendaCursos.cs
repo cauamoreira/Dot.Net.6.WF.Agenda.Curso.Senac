@@ -320,13 +320,14 @@ namespace Dot.Net._6.WF.Calendario.Senac
 
                 if (curso != null)
                 {
+                    // Verifica se a data de fim é posterior a data de início
                     if (dtpFim.Value.Date < dtpInicio.Value.Date)
                     {
                         MessageBox.Show("A 'Data de Fim' deve ser posterior ao dia de Início.",
                             "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         return;
                     }
-
+                    // Armazena os valores originais do curso
                     string nomeOriginal = curso.Nome;
                     DateTime inicioOriginal = curso.Inicio;
                     DateTime fimOriginal = curso.Fim;
@@ -338,14 +339,14 @@ namespace Dot.Net._6.WF.Calendario.Senac
                     string turmaOriginal = curso.Turma;
                     string salaOriginal = curso.Sala;
 
+                    // Atualiza os valores do curso com os novos valores informados no formulário
                     curso.Nome = cmbCurso.Text;
                     curso.Inicio = dtpInicio.Value.Date;
                     curso.Fim = dtpFim.Value.Date;
 
+                    // Obtém os dias selecionados na CheckBoxList
                     var diasSelecionados = clbDias.CheckedItems.OfType<string>().ToList();
-                    curso.Dias = string.Join(", ", diasSelecionados);
-
-
+                    curso.Dias = string.Join(", ", diasSelecionados);                
                     curso.Horario = cmbHorario.Text;
                     curso.Meta = txtMeta.Text;
                     curso.Realizado = txtRealizado.Text;
@@ -354,7 +355,7 @@ namespace Dot.Net._6.WF.Calendario.Senac
                     curso.Sala = txtSala.Text;
 
 
-
+                    // Verifica se já existe um curso com os mesmos detalhes
                     var mesmoHorario = bd.AgendaCursos
                         .Any(c =>
                             c.Id != curso.Id &&
@@ -384,6 +385,7 @@ namespace Dot.Net._6.WF.Calendario.Senac
                         return;
                     }
 
+                    // Adiciona os registros de histórico para cada campo alterado
 
                     AdicionarHistorico(bd, nomeOriginal, curso.Nome, "Nome do Curso");
                     AdicionarHistorico(bd, inicioOriginal.ToString(), curso.Inicio.ToString(), "Data de Início");
@@ -661,61 +663,43 @@ namespace Dot.Net._6.WF.Calendario.Senac
         }
 
 
-
-        private void PesquisarCurso(string Pesquisa)
+        // Filtra os cursos com base no texto de pesquisa
+        private void PesquisarCurso()
         {
             using (var bd = new BancoDeDados())
             {
-                if (!string.IsNullOrEmpty(Pesquisa))
+                // Obtém o texto de pesquisa
+                var textoPesquisa = txtPesquisar.Text.ToLower();
+
+                // Filtra os cursos com base no texto de pesquisa
+                var cursosFiltrados = bd.AgendaCursos
+                    .Where(c =>
+                        c.Nome.ToLower().Contains(textoPesquisa) ||
+                        c.Turma.ToLower().Contains(textoPesquisa) ||
+                        c.Sala.ToLower().Contains(textoPesquisa) ||
+                        c.Horario.ToLower().Contains(textoPesquisa))
+                    .ToList();
+
+                // Atualiza o grid com os cursos filtrados
+                gridCurso.Rows.Clear();
+                foreach (var curso in cursosFiltrados)
                 {
-                    var resultados = bd.AgendaCursos
-                        .Where(c => c.Nome.ToUpper().Contains(Pesquisa.ToUpper()))
-                        .ToList();
-
-                    gridCurso.Columns.Clear();
-
-                    if (gridCurso.Columns.Count == 0)
-                    {
-                        gridCurso.Columns.Add("Id", "ID");
-                        gridCurso.Columns.Add("Nome", "Nome");
-                        gridCurso.Columns.Add("Inicio", "Início");
-                        gridCurso.Columns.Add("Fim", "Fim");
-                        gridCurso.Columns.Add("Dias", "Dias");
-                        gridCurso.Columns.Add("Horario", "Horário");
-                        gridCurso.Columns.Add("Meta", "Meta");
-                        gridCurso.Columns.Add("Realizado", "Realizado");
-                        gridCurso.Columns.Add("Valor", "Valor");
-                        gridCurso.Columns.Add("Turma", "Turma");
-                        gridCurso.Columns.Add("Sala", "Sala");
-                    }
-
-                    foreach (var curso in resultados)
-                    {
-                        gridCurso.Rows.Add(
-                            curso.Id,
-                            curso.Nome,
-                            curso.Inicio,
-                            curso.Fim,
-                            curso.Dias,
-                            curso.Horario,
-                            curso.Meta,
-                            curso.Realizado,
-                            curso.Valor,
-                            curso.Turma,
-                            curso.Sala);
-                    }
-                }
-                else
-                {
-                    ListaTudo();
+                    gridCurso.Rows.Add(
+                        curso.Id,
+                        curso.Nome,
+                        curso.Inicio,
+                        curso.Fim,
+                        curso.Dias,
+                        curso.Horario,
+                        curso.Meta,
+                        curso.Realizado,
+                        curso.Valor,
+                        curso.Turma,
+                        curso.Sala);
                 }
             }
         }
 
-        private void ListaTudo()
-        {
-            Listar();
-        }
 
 
         private void Agenda_de_Curso_FormClosing(object sender, FormClosingEventArgs e)
@@ -743,14 +727,14 @@ namespace Dot.Net._6.WF.Calendario.Senac
 
         private void txtPesquisar_TextChanged_1(object sender, EventArgs e)
         {
-            PesquisarCurso(txtPesquisar.Text);
+            PesquisarCurso();
         }
 
         private void txtPesquisar_KeyPress_1(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (char)Keys.Back)
             {
-                PesquisarCurso(txtPesquisar.Text);
+                PesquisarCurso();
             }
         }
 

@@ -44,6 +44,7 @@ namespace Dot.Net._6.WF.Calendario.Senac
 
             using (var bd = new BancoDeDados())
             {
+                // Adiciona um usuário administrador padrão se não existir nenhum usuário
                 if (!bd.Usuarios.Any())
                 {
 
@@ -167,15 +168,17 @@ namespace Dot.Net._6.WF.Calendario.Senac
         private void btnAlterar_Click(object sender, EventArgs e)
         {
             {
+                // Obtém o usuário do banco de dados
                 using (var bd = new BancoDeDados())
                 {
                     var usuario = bd.Usuarios.FirstOrDefault(w => w.Id == Convert.ToInt32(txtId.Text));
 
                     if (usuario != null)
                     {
-
+                        // Verifica se o usuário logado está tentando editar seus próprios dados
                         if (Autenticacao.UsuarioAtual?.Login == usuario.Login)
                         {
+                            // Atualiza os dados do usuário
                             usuario.Login = txtUsuario.Text;
                             usuario.Cpf = txtCpf.Text;
                             usuario.Senha = txtSenha.Text;
@@ -191,6 +194,7 @@ namespace Dot.Net._6.WF.Calendario.Senac
                                 Detalhes = $"Alterado o usuário: {txtId.Text}"
                             });
 
+                            // Pede confirmação para realizar a alteração
                             DialogResult resultado = MessageBox.Show("Deseja realmente alterar?", "Cadastro de Usuário", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
                             if (resultado == DialogResult.Yes)
@@ -288,21 +292,23 @@ namespace Dot.Net._6.WF.Calendario.Senac
 
         private void GridConsultarUsuario_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
-
+            // Índices das colunas do CPF e senha
             int cpfColumnIndex = 2;
             int senhaColumnIndex = 4;
 
+            // Verifica se é uma célula válida e se tem um usuário autenticado
             if (e.RowIndex >= 0 && e.ColumnIndex >= 0 && Autenticacao.UsuarioAtual != null)
             {
-
+                // Obtém informações sobre o usuário na linha
                 if (GridConsultarUsuario.Rows[e.RowIndex].Cells[1].Value != null)
                 {
                     string usuarioLogadoLogin = Autenticacao.UsuarioAtual.Login;
                     string loginNaLinha = GridConsultarUsuario.Rows[e.RowIndex].Cells[1].Value.ToString();
 
+                    // Verifica se o usuário logado está tentando visualizar seus próprios dados
                     if (!loginNaLinha.Equals(usuarioLogadoLogin, StringComparison.OrdinalIgnoreCase))
                     {
-
+                        // Oculta o CPF e senha de outros usuários
                         if (e.ColumnIndex == cpfColumnIndex && GridConsultarUsuario.Rows[e.RowIndex].Cells[cpfColumnIndex].Value != null)
                         {
                             e.Value = "******";
