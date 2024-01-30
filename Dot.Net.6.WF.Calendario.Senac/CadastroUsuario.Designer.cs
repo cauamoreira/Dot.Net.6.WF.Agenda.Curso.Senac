@@ -53,8 +53,8 @@
             Column6 = new DataGridViewTextBoxColumn();
             btnExcluir = new Button();
             panel1 = new Panel();
-            dtpDataNascimento = new DateTimePicker();
             btnVoltaAgenda = new Button();
+            dtpDataNascimento = new DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)GridConsultarUsuario).BeginInit();
             panel1.SuspendLayout();
             SuspendLayout();
@@ -74,7 +74,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Microsoft PhagsPa", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.Location = new Point(125, 69);
+            label2.Location = new Point(124, 74);
             label2.Name = "label2";
             label2.Size = new Size(75, 22);
             label2.TabIndex = 1;
@@ -84,7 +84,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Microsoft PhagsPa", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.Location = new Point(469, 69);
+            label3.Location = new Point(469, 72);
             label3.Name = "label3";
             label3.Size = new Size(45, 22);
             label3.TabIndex = 2;
@@ -94,7 +94,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Microsoft PhagsPa", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            label4.Location = new Point(123, 135);
+            label4.Location = new Point(123, 138);
             label4.Name = "label4";
             label4.Size = new Size(177, 22);
             label4.TabIndex = 3;
@@ -104,7 +104,7 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Microsoft PhagsPa", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            label5.Location = new Point(469, 136);
+            label5.Location = new Point(469, 139);
             label5.Name = "label5";
             label5.Size = new Size(63, 22);
             label5.TabIndex = 4;
@@ -118,7 +118,7 @@
             txtSenha.Location = new Point(469, 161);
             txtSenha.Name = "txtSenha";
             txtSenha.PasswordChar = '•';
-            txtSenha.Size = new Size(227, 29);
+            txtSenha.Size = new Size(265, 29);
             txtSenha.TabIndex = 3;
             txtSenha.KeyPress += txtSenha_KeyPress;
             // 
@@ -129,7 +129,7 @@
             txtCpf.Font = new Font("Microsoft PhagsPa", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
             txtCpf.Location = new Point(469, 95);
             txtCpf.Name = "txtCpf";
-            txtCpf.Size = new Size(227, 29);
+            txtCpf.Size = new Size(265, 29);
             txtCpf.TabIndex = 1;
             txtCpf.TextChanged += txtCpf_TextChanged;
             txtCpf.KeyDown += txtCpf_KeyDown;
@@ -143,7 +143,7 @@
             txtUsuario.Font = new Font("Microsoft PhagsPa", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
             txtUsuario.Location = new Point(125, 95);
             txtUsuario.Name = "txtUsuario";
-            txtUsuario.Size = new Size(231, 29);
+            txtUsuario.Size = new Size(265, 29);
             txtUsuario.TabIndex = 0;
             txtUsuario.KeyPress += TextOnly;
             // 
@@ -183,7 +183,7 @@
             // btnAdicionarUsuario
             // 
             btnAdicionarUsuario.Font = new Font("Microsoft PhagsPa", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            btnAdicionarUsuario.Location = new Point(64, 577);
+            btnAdicionarUsuario.Location = new Point(123, 594);
             btnAdicionarUsuario.Name = "btnAdicionarUsuario";
             btnAdicionarUsuario.Size = new Size(110, 40);
             btnAdicionarUsuario.TabIndex = 6;
@@ -194,7 +194,7 @@
             // btnAlterar
             // 
             btnAlterar.Font = new Font("Microsoft PhagsPa", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            btnAlterar.Location = new Point(239, 577);
+            btnAlterar.Location = new Point(298, 594);
             btnAlterar.Name = "btnAlterar";
             btnAlterar.Size = new Size(110, 40);
             btnAlterar.TabIndex = 10;
@@ -215,7 +215,7 @@
             GridConsultarUsuario.RowHeadersWidth = 51;
             GridConsultarUsuario.RowTemplate.Height = 29;
             GridConsultarUsuario.ShowCellToolTips = false;
-            GridConsultarUsuario.Size = new Size(802, 300);
+            GridConsultarUsuario.Size = new Size(893, 300);
             GridConsultarUsuario.StandardTab = true;
             GridConsultarUsuario.TabIndex = 8;
             GridConsultarUsuario.CellClick += GridConsultarUsuario_CellClick;
@@ -284,7 +284,7 @@
             // btnExcluir
             // 
             btnExcluir.Font = new Font("Microsoft PhagsPa", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            btnExcluir.Location = new Point(426, 577);
+            btnExcluir.Location = new Point(485, 594);
             btnExcluir.Name = "btnExcluir";
             btnExcluir.Size = new Size(110, 40);
             btnExcluir.TabIndex = 12;
@@ -296,7 +296,6 @@
             // 
             panel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             panel1.AutoSize = true;
-            panel1.BorderStyle = BorderStyle.FixedSingle;
             panel1.Controls.Add(btnVoltaAgenda);
             panel1.Controls.Add(dtpDataNascimento);
             panel1.Controls.Add(GridConsultarUsuario);
@@ -318,23 +317,13 @@
             panel1.Margin = new Padding(3, 4, 3, 4);
             panel1.MaximumSize = new Size(2194, 1439);
             panel1.Name = "panel1";
-            panel1.Size = new Size(809, 657);
+            panel1.Size = new Size(900, 696);
             panel1.TabIndex = 13;
-            // 
-            // dtpDataNascimento
-            // 
-            dtpDataNascimento.Format = DateTimePickerFormat.Custom;
-            dtpDataNascimento.Location = new Point(125, 161);
-            dtpDataNascimento.Margin = new Padding(3, 4, 3, 4);
-            dtpDataNascimento.Name = "dtpDataNascimento";
-            dtpDataNascimento.Size = new Size(230, 27);
-            dtpDataNascimento.TabIndex = 15;
-            dtpDataNascimento.Value = new DateTime(2024, 1, 13, 0, 0, 0, 0);
             // 
             // btnVoltaAgenda
             // 
             btnVoltaAgenda.Font = new Font("Microsoft PhagsPa", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            btnVoltaAgenda.Location = new Point(608, 577);
+            btnVoltaAgenda.Location = new Point(667, 594);
             btnVoltaAgenda.Name = "btnVoltaAgenda";
             btnVoltaAgenda.Size = new Size(110, 40);
             btnVoltaAgenda.TabIndex = 16;
@@ -342,13 +331,23 @@
             btnVoltaAgenda.UseVisualStyleBackColor = true;
             btnVoltaAgenda.Click += btnVoltaAgenda_Click;
             // 
+            // dtpDataNascimento
+            // 
+            dtpDataNascimento.Format = DateTimePickerFormat.Custom;
+            dtpDataNascimento.Location = new Point(125, 161);
+            dtpDataNascimento.Margin = new Padding(3, 4, 3, 4);
+            dtpDataNascimento.Name = "dtpDataNascimento";
+            dtpDataNascimento.Size = new Size(265, 27);
+            dtpDataNascimento.TabIndex = 15;
+            dtpDataNascimento.Value = new DateTime(2024, 1, 13, 0, 0, 0, 0);
+            // 
             // CadastroUsuario
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaption;
             BackgroundImageLayout = ImageLayout.None;
-            ClientSize = new Size(803, 659);
+            ClientSize = new Size(894, 695);
             Controls.Add(panel1);
             DoubleBuffered = true;
             Icon = (Icon)resources.GetObject("$this.Icon");

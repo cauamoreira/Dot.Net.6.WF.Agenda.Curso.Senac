@@ -44,8 +44,9 @@
             // 
             panel1.Controls.Add(gridHistorico);
             panel1.Location = new Point(0, 0);
+            panel1.Margin = new Padding(3, 4, 3, 4);
             panel1.Name = "panel1";
-            panel1.Size = new Size(713, 419);
+            panel1.Size = new Size(1007, 630);
             panel1.TabIndex = 0;
             // 
             // gridHistorico
@@ -55,11 +56,12 @@
             gridHistorico.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             gridHistorico.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column4, Column5 });
             gridHistorico.Location = new Point(0, 0);
+            gridHistorico.Margin = new Padding(3, 4, 3, 4);
             gridHistorico.Name = "gridHistorico";
             gridHistorico.ReadOnly = true;
             gridHistorico.RowHeadersWidth = 51;
             gridHistorico.RowTemplate.Height = 25;
-            gridHistorico.Size = new Size(713, 328);
+            gridHistorico.Size = new Size(1007, 633);
             gridHistorico.TabIndex = 1;
             // 
             // Column1
@@ -69,7 +71,7 @@
             Column1.MinimumWidth = 6;
             Column1.Name = "Column1";
             Column1.ReadOnly = true;
-            Column1.Width = 39;
+            Column1.Width = 47;
             // 
             // Column2
             // 
@@ -78,7 +80,7 @@
             Column2.MinimumWidth = 6;
             Column2.Name = "Column2";
             Column2.ReadOnly = true;
-            Column2.Width = 62;
+            Column2.Width = 75;
             // 
             // Column3
             // 
@@ -87,7 +89,7 @@
             Column3.MinimumWidth = 6;
             Column3.Name = "Column3";
             Column3.ReadOnly = true;
-            Column3.Width = 87;
+            Column3.Width = 109;
             // 
             // Column4
             // 
@@ -96,7 +98,7 @@
             Column4.MinimumWidth = 6;
             Column4.Name = "Column4";
             Column4.ReadOnly = true;
-            Column4.Width = 82;
+            Column4.Width = 102;
             // 
             // Column5
             // 
@@ -105,17 +107,18 @@
             Column5.MinimumWidth = 6;
             Column5.Name = "Column5";
             Column5.ReadOnly = true;
-            Column5.Width = 77;
+            Column5.Width = 96;
             // 
             // ControleAcesso
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoSize = true;
-            ClientSize = new Size(714, 422);
+            ClientSize = new Size(1009, 629);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.FixedDialog;
             Icon = (Icon)resources.GetObject("$this.Icon");
+            Margin = new Padding(3, 4, 3, 4);
             MaximizeBox = false;
             Name = "ControleAcesso";
             StartPosition = FormStartPosition.CenterScreen;

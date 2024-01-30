@@ -70,7 +70,7 @@
             // 
             picLoading.BackColor = Color.White;
             picLoading.Image = (Image)resources.GetObject("picLoading.Image");
-            picLoading.Location = new Point(334, 405);
+            picLoading.Location = new Point(339, 409);
             picLoading.Margin = new Padding(3, 4, 3, 4);
             picLoading.Name = "picLoading";
             picLoading.Size = new Size(76, 58);

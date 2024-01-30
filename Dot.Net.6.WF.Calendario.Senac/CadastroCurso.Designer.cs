@@ -207,14 +207,14 @@
             panel1.Margin = new Padding(3, 5, 3, 5);
             panel1.MaximumSize = new Size(2468, 1655);
             panel1.Name = "panel1";
-            panel1.Size = new Size(708, 620);
+            panel1.Size = new Size(708, 649);
             panel1.TabIndex = 0;
             // 
             // btnVoltarAgenda
             // 
             btnVoltarAgenda.Anchor = AnchorStyles.Bottom;
             btnVoltarAgenda.Font = new Font("Microsoft PhagsPa", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            btnVoltarAgenda.Location = new Point(546, 557);
+            btnVoltarAgenda.Location = new Point(546, 568);
             btnVoltarAgenda.Name = "btnVoltarAgenda";
             btnVoltarAgenda.Size = new Size(110, 40);
             btnVoltarAgenda.TabIndex = 9;
@@ -226,7 +226,7 @@
             // 
             btnExcluirCurso.Anchor = AnchorStyles.Bottom;
             btnExcluirCurso.Font = new Font("Microsoft PhagsPa", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            btnExcluirCurso.Location = new Point(370, 557);
+            btnExcluirCurso.Location = new Point(374, 568);
             btnExcluirCurso.Name = "btnExcluirCurso";
             btnExcluirCurso.Size = new Size(110, 40);
             btnExcluirCurso.TabIndex = 4;
@@ -238,7 +238,7 @@
             // 
             btnAlterarCurso.Anchor = AnchorStyles.Bottom;
             btnAlterarCurso.Font = new Font("Microsoft PhagsPa", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            btnAlterarCurso.Location = new Point(206, 557);
+            btnAlterarCurso.Location = new Point(206, 568);
             btnAlterarCurso.Name = "btnAlterarCurso";
             btnAlterarCurso.Size = new Size(110, 40);
             btnAlterarCurso.TabIndex = 3;
@@ -250,7 +250,7 @@
             // 
             btnAdicionarCurso.Anchor = AnchorStyles.Bottom;
             btnAdicionarCurso.Font = new Font("Microsoft PhagsPa", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            btnAdicionarCurso.Location = new Point(45, 557);
+            btnAdicionarCurso.Location = new Point(45, 568);
             btnAdicionarCurso.Name = "btnAdicionarCurso";
             btnAdicionarCurso.Size = new Size(110, 40);
             btnAdicionarCurso.TabIndex = 2;
@@ -263,7 +263,7 @@
             AutoScaleDimensions = new SizeF(9F, 23F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.Menu;
-            ClientSize = new Size(708, 620);
+            ClientSize = new Size(708, 649);
             Controls.Add(panel1);
             Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
             Icon = (Icon)resources.GetObject("$this.Icon");
