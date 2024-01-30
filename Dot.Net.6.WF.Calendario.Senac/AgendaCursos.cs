@@ -18,11 +18,12 @@ using System.Collections.ObjectModel;
 namespace Dot.Net._6.WF.Calendario.Senac
 {
 
-    public partial class Agenda_de_Curso : Form
+    public partial class AgendaCursos : Form
     {
+        // Lista que armazena os dias selecionados na CheckBoxList
         private List<string> diasSelecionados = new List<string>();
 
-        public Agenda_de_Curso()
+        public AgendaCursos()
         {
             InitializeComponent();
 
@@ -44,6 +45,7 @@ namespace Dot.Net._6.WF.Calendario.Senac
             if (CamposObrigatorios())
                 return;
 
+            // Obtém os valores dos campos do curso a ser adicionado
             var nome = cmbCurso.Text;
             var inicio = dtpInicio.Value;
             var fim = dtpFim.Value;
@@ -56,11 +58,14 @@ namespace Dot.Net._6.WF.Calendario.Senac
 
             using (var bd = new BancoDeDados())
             {
+                // Verifica se já existe um curso com os mesmos detalhes
                 if (CursoExistente(bd, turma, sala, horario, inicio))
                     return;
 
+                // Obtém os dias selecionados na CheckBoxList
                 diasSelecionados = clbDias.CheckedItems.OfType<string>().ToList();
 
+                // Cria um novo curso e adiciona ao banco de dados
                 var curso = new AgendaCurso()
                 {
                     Nome = cmbCurso.Text,
@@ -90,7 +95,7 @@ namespace Dot.Net._6.WF.Calendario.Senac
 
         }
 
-
+        // Método para adicionar um registro de histórico de adição de curso
         private void AdicionarHistorico(BancoDeDados bd, string nome)
         {
             bd.Historicos.Add(new Historico
@@ -132,6 +137,7 @@ namespace Dot.Net._6.WF.Calendario.Senac
             }
             return false;
         }
+        // Método para verificar se um curso com os mesmos detalhes já existe
         private bool CursoExistente(BancoDeDados bd, string turma, string sala, string horario, DateTime inicio)
         {
             var cursoExistente = bd.AgendaCursos
@@ -212,18 +218,20 @@ namespace Dot.Net._6.WF.Calendario.Senac
 
         private void iExcluir()
         {
+            // Verifica se o usuário tem permissão de administrador
             if (!Autenticacao.UsuarioTemPermissaoAdministrador())
             {
                 MessageBox.Show("Você não tem permissão para excluir.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-
+            // Verifica se o ID do curso foi informado
             if (string.IsNullOrEmpty(txtId.Text))
             {
                 MessageBox.Show("Informe o curso antes de tentar excluir.");
             }
             else
             {
+                // Pede confirmação para exclusão
                 DialogResult resultado = MessageBox.Show("Deseja realmente excluir?", "Confirmação", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
                 if (resultado == DialogResult.Yes)
@@ -232,6 +240,7 @@ namespace Dot.Net._6.WF.Calendario.Senac
                     {
                         try
                         {
+                            // Obtém o curso a ser excluído pelo ID
                             var curso = bd.AgendaCursos.FirstOrDefault(w => w.Id == Convert.ToInt32(txtId.Text));
 
                             if (curso != null)

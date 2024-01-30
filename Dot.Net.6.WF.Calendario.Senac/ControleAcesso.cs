@@ -46,7 +46,7 @@ namespace Dot.Net._6.WF.Calendario.Senac
 
         private void AbrirFormAgenda()
         {
-            Agenda_de_Curso agenda_De_Curso = new Agenda_de_Curso();
+            AgendaCursos agenda_De_Curso = new AgendaCursos();
             agenda_De_Curso.Show();
         }
        

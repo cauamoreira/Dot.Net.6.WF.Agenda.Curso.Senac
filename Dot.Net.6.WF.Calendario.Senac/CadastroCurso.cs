@@ -15,7 +15,7 @@ namespace Dot.Net._6.WF.Calendario.Senac
 {
     public partial class CadastroCurso : Form
     {
-        public CadastroCurso(Agenda_de_Curso agenda_De_Curso)
+        public CadastroCurso(AgendaCursos agenda_De_Curso)
         {
 
             InitializeComponent();
@@ -38,7 +38,7 @@ namespace Dot.Net._6.WF.Calendario.Senac
 
         private void AbrirFormAgendaCurso()
         {
-            Agenda_de_Curso agenda_De_Curso = new Agenda_de_Curso();
+            AgendaCursos agenda_De_Curso = new AgendaCursos();
             agenda_De_Curso.Show();
         }
 

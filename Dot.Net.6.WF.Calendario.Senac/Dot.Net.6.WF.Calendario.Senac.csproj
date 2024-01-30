@@ -41,6 +41,7 @@
   <ItemGroup>
     <Compile Update="AgendaCursos.cs">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Form</SubType>
     </Compile>
     <Compile Update="BancoDeDados.cs">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

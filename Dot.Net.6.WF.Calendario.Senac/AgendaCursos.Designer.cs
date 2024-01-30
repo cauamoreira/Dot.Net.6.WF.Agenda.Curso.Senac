@@ -1,6 +1,6 @@
 ﻿namespace Dot.Net._6.WF.Calendario.Senac
 {
-    partial class Agenda_de_Curso
+    partial class AgendaCursos
     {
         /// <summary>
         ///  Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Agenda_de_Curso));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AgendaCursos));
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
@@ -65,9 +65,13 @@
             controleToolStripMenuItem = new ToolStripMenuItem();
             acessoToolStripMenuItem = new ToolStripMenuItem();
             panel1 = new Panel();
-            clbDias = new CheckedListBox();
+            tableLayoutPanel1 = new TableLayoutPanel();
             label2 = new Label();
             txtPesquisar = new TextBox();
+            cmbHorario = new ComboBox();
+            clbDias = new CheckedListBox();
+            mtbValor = new MaskedTextBox();
+            btnSair = new Button();
             gridCurso = new DataGridView();
             Column1 = new DataGridViewTextBoxColumn();
             ColunaCurso = new DataGridViewTextBoxColumn();
@@ -80,16 +84,14 @@
             ColunaCursoValor = new DataGridViewTextBoxColumn();
             ColunaCursoTurma = new DataGridViewTextBoxColumn();
             ColunaCursoSala = new DataGridViewTextBoxColumn();
-            cmbHorario = new ComboBox();
             btnExportar = new Button();
-            mtbValor = new MaskedTextBox();
             btnAdicionar = new Button();
             btnLimparCampos = new Button();
             btnAlterar = new Button();
             btnExcluir = new Button();
-            btnSair = new Button();
             menuStrip1.SuspendLayout();
             panel1.SuspendLayout();
+            tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)gridCurso).BeginInit();
             SuspendLayout();
             // 
@@ -97,7 +99,7 @@
             // 
             lbl.AutoSize = true;
             lbl.Font = new Font("Microsoft PhagsPa", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            lbl.Location = new Point(29, 68);
+            lbl.Location = new Point(305, 0);
             lbl.Name = "lbl";
             lbl.Size = new Size(33, 22);
             lbl.TabIndex = 35;
@@ -106,7 +108,7 @@
             // 
             // txtId
             // 
-            txtId.Location = new Point(62, 64);
+            txtId.Location = new Point(3, 4);
             txtId.Margin = new Padding(3, 4, 3, 4);
             txtId.Name = "txtId";
             txtId.ReadOnly = true;
@@ -118,14 +120,15 @@
             // 
             dtpFim.CalendarMonthBackground = SystemColors.HighlightText;
             dtpFim.CustomFormat = "dd-MM-yyyy";
+            dtpFim.Dock = DockStyle.Top;
             dtpFim.Font = new Font("Microsoft PhagsPa", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
             dtpFim.Format = DateTimePickerFormat.Custom;
-            dtpFim.Location = new Point(568, 148);
+            dtpFim.Location = new Point(643, 145);
             dtpFim.Margin = new Padding(3, 4, 3, 4);
             dtpFim.MaxDate = new DateTime(2999, 12, 31, 0, 0, 0, 0);
             dtpFim.MinDate = new DateTime(1900, 1, 1, 0, 0, 0, 0);
             dtpFim.Name = "dtpFim";
-            dtpFim.Size = new Size(245, 29);
+            dtpFim.Size = new Size(328, 29);
             dtpFim.TabIndex = 3;
             dtpFim.Value = new DateTime(2024, 1, 8, 0, 0, 0, 0);
             // 
@@ -133,28 +136,30 @@
             // 
             dtpInicio.CalendarMonthBackground = SystemColors.HighlightText;
             dtpInicio.CustomFormat = "dd-MM-yyyy";
+            dtpInicio.Dock = DockStyle.Top;
             dtpInicio.Font = new Font("Microsoft PhagsPa", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
             dtpInicio.Format = DateTimePickerFormat.Custom;
-            dtpInicio.Location = new Point(303, 148);
+            dtpInicio.Location = new Point(305, 145);
             dtpInicio.Margin = new Padding(3, 4, 3, 4);
             dtpInicio.MaxDate = new DateTime(2999, 12, 31, 0, 0, 0, 0);
             dtpInicio.MinDate = new DateTime(1900, 1, 1, 0, 0, 0, 0);
             dtpInicio.Name = "dtpInicio";
-            dtpInicio.Size = new Size(245, 29);
+            dtpInicio.Size = new Size(332, 29);
             dtpInicio.TabIndex = 2;
             dtpInicio.Value = new DateTime(2024, 1, 8, 0, 0, 0, 0);
             // 
             // cmbCurso
             // 
             cmbCurso.BackColor = SystemColors.HighlightText;
+            cmbCurso.Dock = DockStyle.Fill;
             cmbCurso.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbCurso.Font = new Font("Microsoft PhagsPa", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
             cmbCurso.FormattingEnabled = true;
             cmbCurso.Items.AddRange(new object[] { "Tecnologia da Informação" });
-            cmbCurso.Location = new Point(30, 147);
+            cmbCurso.Location = new Point(3, 145);
             cmbCurso.Margin = new Padding(3, 4, 3, 4);
             cmbCurso.Name = "cmbCurso";
-            cmbCurso.Size = new Size(245, 30);
+            cmbCurso.Size = new Size(296, 30);
             cmbCurso.TabIndex = 1;
             cmbCurso.KeyPress += TextOnly;
             // 
@@ -162,11 +167,12 @@
             // 
             txtMeta.BackColor = SystemColors.HighlightText;
             txtMeta.BorderStyle = BorderStyle.FixedSingle;
+            txtMeta.Dock = DockStyle.Fill;
             txtMeta.Font = new Font("Microsoft PhagsPa", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
-            txtMeta.Location = new Point(30, 215);
+            txtMeta.Location = new Point(3, 222);
             txtMeta.Margin = new Padding(3, 4, 3, 4);
             txtMeta.Name = "txtMeta";
-            txtMeta.Size = new Size(245, 29);
+            txtMeta.Size = new Size(296, 29);
             txtMeta.TabIndex = 6;
             txtMeta.KeyPress += NumbersOnly;
             // 
@@ -174,22 +180,24 @@
             // 
             txtSala.BackColor = SystemColors.HighlightText;
             txtSala.BorderStyle = BorderStyle.FixedSingle;
+            txtSala.Dock = DockStyle.Top;
             txtSala.Font = new Font("Microsoft PhagsPa", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
-            txtSala.Location = new Point(1099, 215);
+            txtSala.Location = new Point(1300, 222);
             txtSala.Margin = new Padding(3, 4, 3, 4);
             txtSala.Name = "txtSala";
-            txtSala.Size = new Size(245, 29);
+            txtSala.Size = new Size(329, 29);
             txtSala.TabIndex = 10;
             // 
             // txtTurma
             // 
             txtTurma.BackColor = SystemColors.HighlightText;
             txtTurma.BorderStyle = BorderStyle.FixedSingle;
+            txtTurma.Dock = DockStyle.Top;
             txtTurma.Font = new Font("Microsoft PhagsPa", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
-            txtTurma.Location = new Point(833, 215);
+            txtTurma.Location = new Point(977, 222);
             txtTurma.Margin = new Padding(3, 4, 3, 4);
             txtTurma.Name = "txtTurma";
-            txtTurma.Size = new Size(245, 29);
+            txtTurma.Size = new Size(317, 29);
             txtTurma.TabIndex = 9;
             txtTurma.KeyPress += NumbersOnly;
             // 
@@ -197,123 +205,142 @@
             // 
             txtRealizado.BackColor = SystemColors.HighlightText;
             txtRealizado.BorderStyle = BorderStyle.FixedSingle;
+            txtRealizado.Dock = DockStyle.Top;
             txtRealizado.Font = new Font("Microsoft PhagsPa", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
-            txtRealizado.Location = new Point(303, 215);
+            txtRealizado.Location = new Point(305, 222);
             txtRealizado.Margin = new Padding(3, 4, 3, 4);
             txtRealizado.Name = "txtRealizado";
-            txtRealizado.Size = new Size(245, 29);
+            txtRealizado.Size = new Size(332, 29);
             txtRealizado.TabIndex = 7;
             txtRealizado.KeyPress += NumbersOnly;
             // 
             // label12
             // 
             label12.AutoSize = true;
+            label12.Dock = DockStyle.Top;
             label12.Font = new Font("Microsoft PhagsPa", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            label12.Location = new Point(1096, 192);
+            label12.Location = new Point(1298, 196);
+            label12.Margin = new Padding(1, 10, 3, 0);
             label12.Name = "label12";
-            label12.Size = new Size(48, 22);
+            label12.Size = new Size(331, 22);
             label12.TabIndex = 11;
             label12.Text = "Sala:";
             // 
             // label11
             // 
             label11.AutoSize = true;
+            label11.Dock = DockStyle.Top;
             label11.Font = new Font("Microsoft PhagsPa", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            label11.Location = new Point(829, 192);
+            label11.Location = new Point(975, 196);
+            label11.Margin = new Padding(1, 10, 3, 0);
             label11.Name = "label11";
-            label11.Size = new Size(67, 22);
+            label11.Size = new Size(319, 22);
             label11.TabIndex = 10;
             label11.Text = "Turma:";
             // 
             // label10
             // 
             label10.AutoSize = true;
+            label10.Dock = DockStyle.Top;
             label10.Font = new Font("Microsoft PhagsPa", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            label10.Location = new Point(1097, 124);
+            label10.Location = new Point(1298, 120);
+            label10.Margin = new Padding(1, 33, 3, 0);
             label10.Name = "label10";
-            label10.Size = new Size(76, 22);
+            label10.Size = new Size(331, 21);
             label10.TabIndex = 9;
             label10.Text = "Horário:";
             // 
             // label9
             // 
             label9.AutoSize = true;
+            label9.Dock = DockStyle.Top;
             label9.Font = new Font("Microsoft PhagsPa", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            label9.Location = new Point(565, 192);
+            label9.Location = new Point(641, 196);
+            label9.Margin = new Padding(1, 10, 3, 0);
             label9.Name = "label9";
-            label9.Size = new Size(57, 22);
+            label9.Size = new Size(330, 22);
             label9.TabIndex = 8;
             label9.Text = "Valor:";
             // 
             // label4
             // 
             label4.AutoSize = true;
+            label4.Dock = DockStyle.Top;
             label4.Font = new Font("Microsoft PhagsPa", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            label4.Location = new Point(566, 125);
+            label4.Location = new Point(641, 120);
+            label4.Margin = new Padding(1, 33, 3, 0);
             label4.Name = "label4";
-            label4.Size = new Size(45, 22);
+            label4.Size = new Size(330, 21);
             label4.TabIndex = 21;
             label4.Text = "Fim:";
             // 
             // label1
             // 
-            label1.AutoSize = true;
+            label1.Dock = DockStyle.Fill;
             label1.Font = new Font("Microsoft PhagsPa", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(27, 121);
+            label1.Location = new Point(1, 120);
+            label1.Margin = new Padding(1, 33, 3, 0);
             label1.Name = "label1";
-            label1.Size = new Size(60, 22);
+            label1.Size = new Size(298, 21);
             label1.TabIndex = 0;
             label1.Text = "Curso:";
             // 
             // label7
             // 
             label7.AutoSize = true;
+            label7.Dock = DockStyle.Top;
             label7.Font = new Font("Microsoft PhagsPa", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            label7.Location = new Point(299, 191);
+            label7.Location = new Point(303, 196);
+            label7.Margin = new Padding(1, 10, 3, 0);
             label7.Name = "label7";
-            label7.Size = new Size(119, 22);
+            label7.Size = new Size(334, 22);
             label7.TabIndex = 6;
             label7.Text = "Matriculados:";
             // 
             // label6
             // 
             label6.AutoSize = true;
+            label6.Dock = DockStyle.Fill;
             label6.Font = new Font("Microsoft PhagsPa", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            label6.Location = new Point(27, 191);
+            label6.Location = new Point(1, 196);
+            label6.Margin = new Padding(1, 10, 3, 0);
             label6.Name = "label6";
-            label6.Size = new Size(140, 22);
+            label6.Size = new Size(298, 22);
             label6.TabIndex = 5;
             label6.Text = "Meta de Alunos:";
             // 
             // label3
             // 
             label3.AutoSize = true;
+            label3.Dock = DockStyle.Top;
             label3.Font = new Font("Microsoft PhagsPa", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.Location = new Point(302, 124);
+            label3.Location = new Point(303, 120);
+            label3.Margin = new Padding(1, 33, 3, 0);
             label3.Name = "label3";
-            label3.Size = new Size(58, 22);
+            label3.Size = new Size(334, 21);
             label3.TabIndex = 0;
             label3.Text = "Início:";
             // 
             // label5
             // 
             label5.AutoSize = true;
+            label5.Dock = DockStyle.Top;
             label5.Font = new Font("Microsoft PhagsPa", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            label5.Location = new Point(833, 125);
+            label5.Location = new Point(975, 120);
+            label5.Margin = new Padding(1, 33, 3, 0);
             label5.Name = "label5";
-            label5.Size = new Size(49, 22);
+            label5.Size = new Size(319, 21);
             label5.TabIndex = 4;
             label5.Text = "Dias:";
             // 
             // menuStrip1
             // 
-            menuStrip1.Dock = DockStyle.None;
             menuStrip1.ImageScalingSize = new Size(20, 20);
             menuStrip1.Items.AddRange(new ToolStripItem[] { arquivoToolStripMenuItem, editarToolStripMenuItem, cadastrarToolStripMenuItem, controleToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Padding = new Padding(7, 3, 0, 3);
-            menuStrip1.Size = new Size(304, 30);
+            menuStrip1.Size = new Size(1632, 30);
             menuStrip1.TabIndex = 29;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -425,62 +452,78 @@
             // 
             panel1.AutoSize = true;
             panel1.BorderStyle = BorderStyle.FixedSingle;
+            panel1.Controls.Add(tableLayoutPanel1);
             panel1.Controls.Add(btnSair);
-            panel1.Controls.Add(clbDias);
-            panel1.Controls.Add(label2);
-            panel1.Controls.Add(txtPesquisar);
             panel1.Controls.Add(gridCurso);
-            panel1.Controls.Add(cmbHorario);
             panel1.Controls.Add(btnExportar);
-            panel1.Controls.Add(mtbValor);
             panel1.Controls.Add(btnAdicionar);
             panel1.Controls.Add(menuStrip1);
             panel1.Controls.Add(btnLimparCampos);
-            panel1.Controls.Add(lbl);
-            panel1.Controls.Add(txtId);
             panel1.Controls.Add(btnAlterar);
-            panel1.Controls.Add(label5);
             panel1.Controls.Add(btnExcluir);
-            panel1.Controls.Add(dtpFim);
-            panel1.Controls.Add(label3);
-            panel1.Controls.Add(dtpInicio);
-            panel1.Controls.Add(label6);
-            panel1.Controls.Add(cmbCurso);
-            panel1.Controls.Add(label7);
-            panel1.Controls.Add(label1);
-            panel1.Controls.Add(txtMeta);
-            panel1.Controls.Add(label4);
-            panel1.Controls.Add(txtSala);
-            panel1.Controls.Add(label9);
-            panel1.Controls.Add(txtTurma);
-            panel1.Controls.Add(label10);
-            panel1.Controls.Add(label11);
-            panel1.Controls.Add(label12);
-            panel1.Controls.Add(txtRealizado);
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(0, 0);
             panel1.Margin = new Padding(3, 4, 3, 4);
             panel1.MaximumSize = new Size(1920, 1399);
             panel1.MinimumSize = new Size(1028, 799);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1391, 856);
+            panel1.Size = new Size(1634, 856);
             panel1.TabIndex = 0;
             // 
-            // clbDias
+            // tableLayoutPanel1
             // 
-            clbDias.FormattingEnabled = true;
-            clbDias.Location = new Point(833, 148);
-            clbDias.Name = "clbDias";
-            clbDias.Size = new Size(245, 26);
-            clbDias.TabIndex = 1;
+            tableLayoutPanel1.ColumnCount = 5;
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 47.1669235F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 52.8330765F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 334F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 323F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 334F));
+            tableLayoutPanel1.Controls.Add(txtMeta, 0, 5);
+            tableLayoutPanel1.Controls.Add(label12, 4, 4);
+            tableLayoutPanel1.Controls.Add(label2, 4, 0);
+            tableLayoutPanel1.Controls.Add(txtSala, 4, 5);
+            tableLayoutPanel1.Controls.Add(txtPesquisar, 4, 1);
+            tableLayoutPanel1.Controls.Add(label6, 0, 4);
+            tableLayoutPanel1.Controls.Add(cmbCurso, 0, 3);
+            tableLayoutPanel1.Controls.Add(lbl, 1, 0);
+            tableLayoutPanel1.Controls.Add(cmbHorario, 4, 3);
+            tableLayoutPanel1.Controls.Add(txtId, 0, 0);
+            tableLayoutPanel1.Controls.Add(label11, 3, 4);
+            tableLayoutPanel1.Controls.Add(clbDias, 3, 3);
+            tableLayoutPanel1.Controls.Add(txtTurma, 3, 5);
+            tableLayoutPanel1.Controls.Add(txtRealizado, 1, 5);
+            tableLayoutPanel1.Controls.Add(label1, 0, 2);
+            tableLayoutPanel1.Controls.Add(label9, 2, 4);
+            tableLayoutPanel1.Controls.Add(mtbValor, 2, 5);
+            tableLayoutPanel1.Controls.Add(label7, 1, 4);
+            tableLayoutPanel1.Controls.Add(dtpInicio, 1, 3);
+            tableLayoutPanel1.Controls.Add(label3, 1, 2);
+            tableLayoutPanel1.Controls.Add(dtpFim, 2, 3);
+            tableLayoutPanel1.Controls.Add(label4, 2, 2);
+            tableLayoutPanel1.Controls.Add(label5, 3, 2);
+            tableLayoutPanel1.Controls.Add(label10, 4, 2);
+            tableLayoutPanel1.Dock = DockStyle.Top;
+            tableLayoutPanel1.Location = new Point(0, 30);
+            tableLayoutPanel1.Name = "tableLayoutPanel1";
+            tableLayoutPanel1.RowCount = 6;
+            tableLayoutPanel1.RowStyles.Add(new RowStyle());
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 54F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 45F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 32F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 38F));
+            tableLayoutPanel1.Size = new Size(1632, 256);
+            tableLayoutPanel1.TabIndex = 39;
             // 
             // label2
             // 
             label2.AutoSize = true;
+            label2.Dock = DockStyle.Top;
             label2.Font = new Font("Microsoft PhagsPa", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.Location = new Point(1099, 44);
+            label2.Location = new Point(1297, 13);
+            label2.Margin = new Padding(0, 13, 3, 0);
             label2.Name = "label2";
-            label2.Size = new Size(90, 22);
+            label2.Size = new Size(332, 22);
             label2.TabIndex = 37;
             label2.Text = "Pesquisar:";
             // 
@@ -488,14 +531,62 @@
             // 
             txtPesquisar.BackColor = SystemColors.HighlightText;
             txtPesquisar.BorderStyle = BorderStyle.FixedSingle;
+            txtPesquisar.Dock = DockStyle.Top;
             txtPesquisar.Font = new Font("Microsoft PhagsPa", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
-            txtPesquisar.Location = new Point(1099, 68);
+            txtPesquisar.Location = new Point(1300, 39);
             txtPesquisar.Margin = new Padding(3, 4, 3, 4);
             txtPesquisar.Name = "txtPesquisar";
-            txtPesquisar.Size = new Size(245, 29);
+            txtPesquisar.Size = new Size(329, 29);
             txtPesquisar.TabIndex = 36;
             txtPesquisar.TextChanged += txtPesquisar_TextChanged_1;
             txtPesquisar.KeyPress += txtPesquisar_KeyPress_1;
+            // 
+            // cmbHorario
+            // 
+            cmbHorario.BackColor = SystemColors.HighlightText;
+            cmbHorario.Dock = DockStyle.Top;
+            cmbHorario.Font = new Font("Microsoft PhagsPa", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
+            cmbHorario.FormattingEnabled = true;
+            cmbHorario.Items.AddRange(new object[] { "7:30 às 12:00", "8:00 às 12:00", "9:15 às 12:15", "13:30 às 17:30", "14:00 às 17:00", "14:00 às 17:30", "18:00 às 22:30", "19:00 às 22:30" });
+            cmbHorario.Location = new Point(1300, 145);
+            cmbHorario.Margin = new Padding(3, 4, 3, 4);
+            cmbHorario.Name = "cmbHorario";
+            cmbHorario.Size = new Size(329, 30);
+            cmbHorario.TabIndex = 5;
+            // 
+            // clbDias
+            // 
+            clbDias.Dock = DockStyle.Top;
+            clbDias.Font = new Font("Microsoft PhagsPa", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
+            clbDias.FormattingEnabled = true;
+            clbDias.Location = new Point(977, 144);
+            clbDias.Name = "clbDias";
+            clbDias.Size = new Size(317, 28);
+            clbDias.TabIndex = 1;
+            // 
+            // mtbValor
+            // 
+            mtbValor.Dock = DockStyle.Top;
+            mtbValor.Font = new Font("Microsoft PhagsPa", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
+            mtbValor.Location = new Point(643, 222);
+            mtbValor.Margin = new Padding(3, 4, 3, 4);
+            mtbValor.Mask = "$00,000,00";
+            mtbValor.Name = "mtbValor";
+            mtbValor.Size = new Size(328, 29);
+            mtbValor.TabIndex = 8;
+            // 
+            // btnSair
+            // 
+            btnSair.Anchor = AnchorStyles.Bottom;
+            btnSair.Font = new Font("Microsoft PhagsPa", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
+            btnSair.Location = new Point(1237, 773);
+            btnSair.Margin = new Padding(3, 4, 3, 4);
+            btnSair.Name = "btnSair";
+            btnSair.Size = new Size(110, 40);
+            btnSair.TabIndex = 38;
+            btnSair.Text = "Sair";
+            btnSair.UseVisualStyleBackColor = true;
+            btnSair.Click += btnSair_Click;
             // 
             // gridCurso
             // 
@@ -508,14 +599,14 @@
             gridCurso.BackgroundColor = Color.LightGray;
             gridCurso.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             gridCurso.Columns.AddRange(new DataGridViewColumn[] { Column1, ColunaCurso, ColunaCursoInicio, ColunaCursoFim, ColunaCursoDias, ColunaCursoHorario, ColunaCursoMeta, ColunaCursoRealizado, ColunaCursoValor, ColunaCursoTurma, ColunaCursoSala });
-            gridCurso.Location = new Point(0, 284);
+            gridCurso.Location = new Point(-1, 289);
             gridCurso.Margin = new Padding(3, 4, 3, 4);
             gridCurso.MaximumSize = new Size(2194, 1200);
             gridCurso.Name = "gridCurso";
             gridCurso.ReadOnly = true;
             gridCurso.RowHeadersWidth = 51;
             gridCurso.RowTemplate.Height = 25;
-            gridCurso.Size = new Size(1387, 428);
+            gridCurso.Size = new Size(1633, 420);
             gridCurso.TabIndex = 17;
             gridCurso.CellClick += gridCurso_CellClick;
             // 
@@ -615,23 +706,11 @@
             ColunaCursoSala.Name = "ColunaCursoSala";
             ColunaCursoSala.ReadOnly = true;
             // 
-            // cmbHorario
-            // 
-            cmbHorario.BackColor = SystemColors.HighlightText;
-            cmbHorario.Font = new Font("Microsoft PhagsPa", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
-            cmbHorario.FormattingEnabled = true;
-            cmbHorario.Items.AddRange(new object[] { "7:30 às 12:00", "8:00 às 12:00", "9:15 às 12:15", "13:30 às 17:30", "14:00 às 17:00", "14:00 às 17:30", "18:00 às 22:30", "19:00 às 22:30" });
-            cmbHorario.Location = new Point(1099, 147);
-            cmbHorario.Margin = new Padding(3, 4, 3, 4);
-            cmbHorario.Name = "cmbHorario";
-            cmbHorario.Size = new Size(245, 30);
-            cmbHorario.TabIndex = 5;
-            // 
             // btnExportar
             // 
             btnExportar.Anchor = AnchorStyles.Bottom;
             btnExportar.Font = new Font("Microsoft PhagsPa", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            btnExportar.Location = new Point(922, 773);
+            btnExportar.Location = new Point(1044, 773);
             btnExportar.Margin = new Padding(3, 4, 3, 4);
             btnExportar.Name = "btnExportar";
             btnExportar.Size = new Size(110, 40);
@@ -640,21 +719,11 @@
             btnExportar.UseVisualStyleBackColor = true;
             btnExportar.Click += btnExportar_Click;
             // 
-            // mtbValor
-            // 
-            mtbValor.Font = new Font("Microsoft PhagsPa", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
-            mtbValor.Location = new Point(568, 215);
-            mtbValor.Margin = new Padding(3, 4, 3, 4);
-            mtbValor.Mask = "$00,000,00";
-            mtbValor.Name = "mtbValor";
-            mtbValor.Size = new Size(245, 29);
-            mtbValor.TabIndex = 8;
-            // 
             // btnAdicionar
             // 
             btnAdicionar.Anchor = AnchorStyles.Bottom;
             btnAdicionar.Font = new Font("Microsoft PhagsPa", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            btnAdicionar.Location = new Point(164, 773);
+            btnAdicionar.Location = new Point(286, 773);
             btnAdicionar.Margin = new Padding(3, 4, 3, 4);
             btnAdicionar.Name = "btnAdicionar";
             btnAdicionar.Size = new Size(110, 40);
@@ -667,7 +736,7 @@
             // 
             btnLimparCampos.Anchor = AnchorStyles.Bottom;
             btnLimparCampos.Font = new Font("Microsoft PhagsPa", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            btnLimparCampos.Location = new Point(353, 773);
+            btnLimparCampos.Location = new Point(475, 773);
             btnLimparCampos.Margin = new Padding(3, 4, 3, 4);
             btnLimparCampos.Name = "btnLimparCampos";
             btnLimparCampos.Size = new Size(110, 40);
@@ -680,7 +749,7 @@
             // 
             btnAlterar.Anchor = AnchorStyles.Bottom;
             btnAlterar.Font = new Font("Microsoft PhagsPa", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            btnAlterar.Location = new Point(730, 773);
+            btnAlterar.Location = new Point(852, 773);
             btnAlterar.Margin = new Padding(3, 4, 3, 4);
             btnAlterar.Name = "btnAlterar";
             btnAlterar.Size = new Size(110, 40);
@@ -693,7 +762,7 @@
             // 
             btnExcluir.Anchor = AnchorStyles.Bottom;
             btnExcluir.Font = new Font("Microsoft PhagsPa", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            btnExcluir.Location = new Point(537, 773);
+            btnExcluir.Location = new Point(659, 773);
             btnExcluir.Margin = new Padding(3, 4, 3, 4);
             btnExcluir.Name = "btnExcluir";
             btnExcluir.Size = new Size(110, 40);
@@ -702,33 +771,20 @@
             btnExcluir.UseVisualStyleBackColor = true;
             btnExcluir.Click += btnExcluir_Click_1;
             // 
-            // btnSair
-            // 
-            btnSair.Anchor = AnchorStyles.Bottom;
-            btnSair.Font = new Font("Microsoft PhagsPa", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
-            btnSair.Location = new Point(1115, 773);
-            btnSair.Margin = new Padding(3, 4, 3, 4);
-            btnSair.Name = "btnSair";
-            btnSair.Size = new Size(110, 40);
-            btnSair.TabIndex = 38;
-            btnSair.Text = "Sair";
-            btnSair.UseVisualStyleBackColor = true;
-            btnSair.Click += btnSair_Click;
-            // 
-            // Agenda_de_Curso
+            // AgendaCursos
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoScroll = true;
             AutoSizeMode = AutoSizeMode.GrowAndShrink;
             BackColor = SystemColors.ActiveCaption;
-            ClientSize = new Size(1391, 856);
+            ClientSize = new Size(1634, 856);
             Controls.Add(panel1);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(3, 4, 3, 4);
             MaximumSize = new Size(1920, 1378);
             MinimumSize = new Size(1026, 776);
-            Name = "Agenda_de_Curso";
+            Name = "AgendaCursos";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "AGENDA DE CURSOS";
             FormClosing += Agenda_de_Curso_FormClosing;
@@ -737,6 +793,8 @@
             menuStrip1.PerformLayout();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            tableLayoutPanel1.ResumeLayout(false);
+            tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)gridCurso).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -803,5 +861,6 @@
         private DataGridViewTextBoxColumn ColunaCursoTurma;
         private DataGridViewTextBoxColumn ColunaCursoSala;
         private Button btnSair;
+        private TableLayoutPanel tableLayoutPanel1;
     }
 }

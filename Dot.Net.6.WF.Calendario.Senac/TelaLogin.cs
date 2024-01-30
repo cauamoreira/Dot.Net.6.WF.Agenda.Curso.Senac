@@ -2,7 +2,7 @@
 {
     public partial class TelaLogin : Form
     {
-
+       // determinar se a senha está visível ou oculta
         private bool _podeVerSenha = false;
 
         public TelaLogin()
@@ -16,7 +16,7 @@
 
         private void AbrirFormPrincipal()
         {
-            Agenda_de_Curso agenda_De_Curso = new Agenda_de_Curso();
+            AgendaCursos agenda_De_Curso = new AgendaCursos();
             agenda_De_Curso.Show();
             this.Hide();
         }
@@ -48,6 +48,7 @@
 
             using (var bd = new BancoDeDados())
             {
+                 // Se não houver usuários, cria um usuário administrador padrão
                 if (!bd.Usuarios.Any())
                 {
                     bd.Usuarios.Add(new Usuario
@@ -62,6 +63,7 @@
 
                     bd.SaveChanges();
                 }
+                // Verifica se as credenciais do usuário inseridas são válidas
                 var usuarioExistente = bd.Usuarios.FirstOrDefault(u => u.Login == usuario);
 
                 if (usuarioExistente != null && Autenticacao.AutenticarUsuario(usuario, senha))
@@ -111,22 +113,6 @@
             esqueceuSenha.Show();
         }
 
-        //private void picSenha_Click(object sender, EventArgs e)
-        //{
-
-        //    _podeVerSenha = !_podeVerSenha;
-
-        //    if (_podeVerSenha)
-        //    {
-        //        picSenha.Image = Properties.Resources.esconder;
-        //        txtSenha.PasswordChar = '•';
-        //    }
-        //    else
-        //    {
-        //        picSenha.Image = Properties.Resources.visualizar;
-        //        txtSenha.PasswordChar = '\0';
-        //    }
-        //}
 
         private void TelaLogin_FormClosing(object sender, FormClosingEventArgs e)
         {
